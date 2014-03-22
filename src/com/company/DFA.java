@@ -6,21 +6,15 @@ import java.util.*;
 public class DFA {
 
     private Map<Integer, Map<String, Integer>> stateTable = new HashMap<Integer, Map<String, Integer>>();
-    private Integer initState = 1;
-    private Set<Integer> finalStates = new HashSet<Integer>();
-    private Integer stateNum = 1;
     private Set<String> alphabet = new HashSet<String>();
+    private Set<Integer> finalStates = new HashSet<Integer>();
+    private Integer initState = 1;
+    private Integer stateNum = 1;
 
-    public DFA() {
-
-    }
+    public DFA() {}
 
     public Map<Integer, Map<String, Integer>> getStateTable() {
         return stateTable;
-    }
-
-    public void setStateTable(Map<Integer, Map<String, Integer>> stateTable) {
-        this.stateTable = stateTable;
     }
 
     public Integer getInitState() {
@@ -33,10 +27,6 @@ public class DFA {
 
     public Set<Integer> getFinalStates() {
         return finalStates;
-    }
-
-    public void setFinalStates(Set<Integer> finalStates) {
-        this.finalStates = finalStates;
     }
 
     public Integer getStateNum() {
