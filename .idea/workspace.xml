@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3463e51e-437f-41db-9112-a6b2e4129fc0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/NfaToDfaConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/DFA.java" afterPath="$PROJECT_DIR$/src/com/company/DFA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/NFA.java" afterPath="$PROJECT_DIR$/src/com/company/NFA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RegExpParser.iws" />
@@ -24,23 +23,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/company/DFA.java" line="54" class="com.company.DFA" package="com.company">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -87,31 +70,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="630">
+            <state line="27" column="29" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.7180851" vertical-offset="135" max-vertical-offset="585">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NfaToDfaConverter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/NfaToDfaConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="40" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.0" vertical-offset="249" max-vertical-offset="1755">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#609#623#0" expanded="true" />
+                <element signature="e#1411#1434#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DFA.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AbstractCollection.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/AbstractCollection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="259" column="0" selection-start="8699" selection-end="8699" vertical-scroll-proportion="0.0" vertical-offset="3885" max-vertical-offset="7065">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DFA.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/DFA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="38" selection-start="2383" selection-end="2383" vertical-scroll-proportion="2.3136246" vertical-offset="45" max-vertical-offset="1575">
-              <folding>
-                <element signature="e#127#158#0" expanded="true" />
-                <element signature="e#231#240#0" expanded="true" />
-                <element signature="e#308#316#0" expanded="true" />
-                <element signature="e#464#505#0" expanded="true" />
-                <element signature="e#1554#1577#0" expanded="true" />
-                <element signature="e#2542#2551#0" expanded="true" />
-                <element signature="e#2971#2980#0" expanded="true" />
-                <element signature="e#3212#3221#0" expanded="true" />
-              </folding>
+            <state line="5" column="13" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="360">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,16 +122,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="25" column="26" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="2985">
-              <folding>
-                <element signature="e#522#523#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
-                <element signature="e#631#632#0" expanded="true" />
-                <element signature="e#745#753#0" expanded="true" />
-                <element signature="e#804#812#0" expanded="true" />
-                <element signature="e#888#897#0" expanded="true" />
-                <element signature="e#6320#6357#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,17 +146,18 @@
         <option value="$PROJECT_DIR$/src/com/company/ExpParse/ExpressionTree.java" />
         <option value="$PROJECT_DIR$/src/com/company/ExpParse/ExpressionParser.java" />
         <option value="$PROJECT_DIR$/src/com/company/State.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/NFA.java" />
         <option value="$PROJECT_DIR$/src/com/company/DFA.java" />
+        <option value="$PROJECT_DIR$/src/com/company/NfaToDfaConverter.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="27" />
-    <option name="width" value="1368" />
-    <option name="height" value="747" />
+    <option name="x" value="-58" />
+    <option name="y" value="93" />
+    <option name="width" value="1360" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -203,7 +188,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -242,6 +226,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,6 +363,25 @@
       <option name="trusted" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -404,25 +408,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -461,6 +446,25 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -494,25 +498,6 @@
       <option name="screenWidth" value="0" />
       <option name="url" value="http://" />
       <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <list size="3">
@@ -560,15 +545,21 @@
       <workItem from="1395324782078" duration="21128000" />
       <workItem from="1395382850070" duration="3171000" />
       <workItem from="1395422890531" duration="38000" />
-      <workItem from="1395492563266" duration="6953000" />
+      <workItem from="1395492563266" duration="12280000" />
+      <workItem from="1395514839147" duration="617000" />
     </task>
+    <task id="LOCAL-00001" summary="convert from nfa to dfa super feature">
+      <created>1395505557195</created>
+      <updated>1395505557195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56844000" />
+    <option name="totallyTimeSpent" value="62788000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1368" height="747" extended-state="6" />
+    <frame x="-58" y="93" width="1360" height="726" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -578,7 +569,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39579967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39464882" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -590,21 +581,21 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23867069" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279483" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23860182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32608697" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -622,8 +613,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -639,6 +630,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="convert from nfa to dfa super feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert from nfa to dfa super feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -648,28 +641,31 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/RegExpParser.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="26" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="2985">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="23" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="21" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="375">
-          <folding>
-            <element signature="e#127#158#0" expanded="true" />
-            <element signature="e#231#240#0" expanded="true" />
-            <element signature="e#308#316#0" expanded="true" />
-            <element signature="e#464#505#0" expanded="true" />
-            <element signature="e#1554#1577#0" expanded="true" />
-            <element signature="e#2542#2551#0" expanded="true" />
-            <element signature="e#2971#2980#0" expanded="true" />
-            <element signature="e#3212#3221#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -683,41 +679,21 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="148" column="0" selection-start="5396" selection-end="5396" vertical-scroll-proportion="0.0" vertical-offset="1874" max-vertical-offset="2865">
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="23" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="540">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="21" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="375">
-          <folding>
-            <element signature="e#127#158#0" expanded="true" />
-            <element signature="e#231#240#0" expanded="true" />
-            <element signature="e#308#316#0" expanded="true" />
-            <element signature="e#464#505#0" expanded="true" />
-            <element signature="e#1554#1577#0" expanded="true" />
-            <element signature="e#2542#2551#0" expanded="true" />
-            <element signature="e#2971#2980#0" expanded="true" />
-            <element signature="e#3212#3221#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -731,25 +707,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="148" column="0" selection-start="5396" selection-end="5396" vertical-scroll-proportion="0.0" vertical-offset="1874" max-vertical-offset="2865">
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="43" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="510">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -762,9 +727,7 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1155" column="0" selection-start="44520" selection-end="44520" vertical-scroll-proportion="0.0" vertical-offset="17325" max-vertical-offset="18270">
-          <folding />
-        </state>
+        <state line="1155" column="0" selection-start="44520" selection-end="44520" vertical-scroll-proportion="0.0" vertical-offset="17325" max-vertical-offset="18270" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/Stack.java">
@@ -777,16 +740,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="30" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2880">
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -803,25 +757,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="42" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="375">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="4" selection-start="3081" selection-end="3081" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1395">
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -838,25 +781,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="42" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="375">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="4" selection-start="3081" selection-end="3081" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1395">
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -873,25 +805,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="330">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="41" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1815">
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -908,25 +829,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="330">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="41" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1815">
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -943,25 +853,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="330">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="0" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1395">
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -978,25 +877,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="330">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="0" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1395">
-          <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,7 +912,24 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1155" column="0" selection-start="44520" selection-end="44520" vertical-scroll-proportion="-0.5827703" vertical-offset="17325" max-vertical-offset="17925">
+        <state line="1155" column="0" selection-start="44520" selection-end="44520" vertical-scroll-proportion="-0.5827703" vertical-offset="17325" max-vertical-offset="17925" />
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-oracle/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="0" selection-start="4261" selection-end="4261" vertical-scroll-proportion="0.847973" vertical-offset="1088" max-vertical-offset="1680" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/DFA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="259" column="0" selection-start="8699" selection-end="8699" vertical-scroll-proportion="0.0" vertical-offset="3425" max-vertical-offset="6720">
           <folding />
         </state>
       </provider>
@@ -1036,49 +941,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-7-oracle/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="4261" selection-end="4261" vertical-scroll-proportion="0.847973" vertical-offset="1088" max-vertical-offset="1680" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="26" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="2985">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/NfaToDfaConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="40" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.0" vertical-offset="249" max-vertical-offset="1755">
           <folding>
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
-            <element signature="e#804#812#0" expanded="true" />
-            <element signature="e#888#897#0" expanded="true" />
-            <element signature="e#6320#6357#0" expanded="true" />
+            <element signature="e#609#623#0" expanded="true" />
+            <element signature="e#1411#1434#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="630">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/DFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="38" selection-start="2383" selection-end="2383" vertical-scroll-proportion="2.3136246" vertical-offset="45" max-vertical-offset="1575">
-          <folding>
-            <element signature="e#127#158#0" expanded="true" />
-            <element signature="e#231#240#0" expanded="true" />
-            <element signature="e#308#316#0" expanded="true" />
-            <element signature="e#464#505#0" expanded="true" />
-            <element signature="e#1554#1577#0" expanded="true" />
-            <element signature="e#2542#2551#0" expanded="true" />
-            <element signature="e#2971#2980#0" expanded="true" />
-            <element signature="e#3212#3221#0" expanded="true" />
-          </folding>
+        <state line="27" column="29" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.7180851" vertical-offset="135" max-vertical-offset="585">
+          <folding />
         </state>
       </provider>
     </entry>
