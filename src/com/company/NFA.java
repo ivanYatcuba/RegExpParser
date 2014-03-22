@@ -35,13 +35,19 @@ public class NFA {
         Integer count = 0;
         String perviousChar = null;
 
+        exp = "(" +exp + ")";
         for (int i = -1; (i = exp.indexOf("*", i + 1)) != -1; ) {
             if(exp.charAt(i-1) != ')') {
                 exp = exp.substring(0, i-1) + "(" + exp.substring(i-1,i+1) + ")" + exp.substring(i+1,exp.length());
                 i+=2;
+            }else{
+                int y = exp.substring(0,i-1).lastIndexOf('(');
+                exp = exp.substring(0, y) + "(" + exp.substring(y,i-1) + exp.substring(i-1,i+1) + ")" + exp.substring(i+1,exp.length());
+                i+=2;
+                System.out.println(exp);
             }
         }
-        exp = "(" +exp + ")";
+
         char [] arr = exp.toCharArray();
         for(char c : arr) {
             String s = String.valueOf(c);
@@ -53,7 +59,10 @@ public class NFA {
                     NFA nfa1 = NFAs.pop();
                     String op = ops.pop();
                     if      (op.equals("|"))    nfa1.alter(NFAs.pop());
-                    else if (op.equals("*"))    nfa1.star(nfa1);
+                    else if (op.equals("*")) {
+
+                        nfa1.star(nfa1);
+                    }
                     NFAs.add(nfa1);
                 }
             }

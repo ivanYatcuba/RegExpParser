@@ -20,12 +20,12 @@ public class Main {
         tests.add("a*|b: \t" + (new NFA("a*|b")).toString());
         tests.add("ba*: \t" + (new NFA("ba*")).toString());*/
 
-        tests.add("a*b: \t" + (new NFA("a*b")).toString());
+        tests.add("(a|b)*abb: \t" + (new NFA("(a|b)*abb")).toString());
 
         for(String test : tests) {
             System.out.println(test);
         }
-        NFA nfa = new NFA("a|b");
+        NFA nfa = new NFA("(a|b)*abb");
         DFA dfa = new DFA();
         NfaToDfaConverter converter = new NfaToDfaConverter();
         converter.NFAtoDFA(nfa);

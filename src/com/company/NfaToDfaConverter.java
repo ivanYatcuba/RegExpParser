@@ -12,7 +12,7 @@ public class NfaToDfaConverter {
         Map<Set<Integer>, Map<String, Set<Integer>>> dfaStateTable = new HashMap<Set<Integer>, Map<String, Set<Integer>>>();
 
         //building an alphabet
-        dfa.alphabet = buildDfaAlphabet(nfa);
+        dfa.setAlphabet(buildDfaAlphabet(nfa));
 
         //let`s go and add init state!
         Set<Integer> initState = this.epsClosure(nfa.getStateTable(), 1);
@@ -23,7 +23,7 @@ public class NfaToDfaConverter {
         statesStack.push(initState);
         while(!statesStack.isEmpty()){
             Set<Integer> dfaState = statesStack.pop();
-            for(String s : dfa.alphabet){
+            for(String s : dfa.getAlphabet()){
                 Set<Integer> newState = this.goToState(nfa.getStateTable(), dfaState, s);
 
                 if(!dfaStateTable.keySet().contains(newState) && !newState.isEmpty()) {
@@ -38,27 +38,28 @@ public class NfaToDfaConverter {
         //yo, mark dfa states by indices and fill final states set
         Map<Set<Integer>, Integer> stateIndex = new HashMap<Set<Integer>, Integer>();
         for(Set<Integer> dfaState : dfaStateTable.keySet()) {
-            stateIndex.put(dfaState, dfa.stateNum);
+            Integer index = dfa.getStateNum();
+            stateIndex.put(dfaState, index);
             if(dfaState.contains(nfa.getFinalState())) {
-                dfa.finalStates.add(dfa.stateNum);
+                dfa.getFinalStates().add(index);
             }
-            if(dfaState.equals(initState)) {dfa.initState = dfa.stateNum;}
-            dfa.stateNum++;
+            if(dfaState.equals(initState)) dfa.setInitState(dfa.getStateNum());
+            dfa.setStateNum(dfa.getStateNum() + 1);
         }
 
         //get ready for building dfa state table!
         //here we go...
         for(Set<Integer> dfaState : dfaStateTable.keySet()) {
             Integer i = stateIndex.get(dfaState);
-            dfa.stateTable.put(i, new HashMap<String, Integer>());
+            dfa.getStateTable().put(i, new HashMap<String, Integer>());
             for(String s : dfaStateTable.get(dfaState).keySet()) {
-                dfa.stateTable.get(i).put(s, stateIndex.get(dfaStateTable.get(dfaState).get(s)));
+                dfa.getStateTable().get(i).put(s, stateIndex.get(dfaStateTable.get(dfaState).get(s)));
             }
         }
 
-        System.out.println(dfa.stateTable);
-        System.out.println(dfa.finalStates);
-        System.out.println(dfa.initState);
+        System.out.println(dfa.getStateTable());
+        System.out.println(dfa.getFinalStates());
+        System.out.println(dfa.getInitState());
 
 
     }
