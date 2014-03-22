@@ -18,6 +18,14 @@ public class NFA {
         stateTable.put(initState, new HashMap<String, List<Integer>>());
     }
 
+    public Map<Integer, Map<String, List<Integer>>> getStateTable(){
+        return this.stateTable;
+    }
+
+    public Integer getFinalState() {
+        return finalState;
+    }
+
     public NFA(String exp){
 
         Stack<NFA> NFAs = new Stack<NFA>();
