@@ -7,7 +7,7 @@ public class NfaToDfaConverter {
 
 
 
-    public void NFAtoDFA(NFA nfa) {
+    public DFA NFAtoDFA(NFA nfa) {
         DFA dfa = new DFA();
         Map<Set<Integer>, Map<String, Set<Integer>>> dfaStateTable = new HashMap<Set<Integer>, Map<String, Set<Integer>>>();
 
@@ -61,6 +61,7 @@ public class NfaToDfaConverter {
         System.out.println(dfa.getFinalStates());
         System.out.println(dfa.getInitState());
 
+        return  dfa;
 
     }
 
