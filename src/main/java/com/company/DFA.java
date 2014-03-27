@@ -10,25 +10,28 @@ public class DFA {
     private Set<Integer> finalStates = new LinkedHashSet<Integer>();
     private Integer initState = 1;
     private Integer stateNum = 1;
+    final int STAR = -1;
+    final int CROSS = 1;
+    final int CHECK = 2;
+    final int EMPTY = 0;
 
     public DFA() {}
 
     public void minimize(){
-        final int CROSS = 1;
-        final int CHECK = 2;
-        final int EMPTY = 0;
+
         int tableSize = stateTable.size();
         int[][] minimizationTable = new int[tableSize][tableSize];
+
 
         //Mark diagonal with check
         for(int i=0; i<tableSize; i++) {
             minimizationTable[i][i] = CHECK;
         }
 
-        //Mark half of table with cross
+        //Mark half of table with star
         for(int i=0; i<tableSize; i++) {
             for(int j=0; j<i; j++){
-                minimizationTable[i][j] = CROSS;
+                minimizationTable[i][j] = STAR;
             }
 
         }
@@ -50,9 +53,69 @@ public class DFA {
             }
         }
 
-        Map<ArrayList<Integer>, Map<String, ArrayList<Integer>>> secondTable;
-
         //Main algorithm
+        markCross(tableSize, minimizationTable);
+        markCross(tableSize, minimizationTable);
+        for(int i = 0; i<tableSize; i++) {
+            for(int j=i+1; j<tableSize; j++) {
+                if(minimizationTable[i][j] == EMPTY){minimizationTable[i][j] = CHECK;}
+            }
+        }
+
+        //Merge equal states
+        for(int i=0; i<tableSize; i++) {
+            for(int j=i+1; j<tableSize; j++){
+                if(minimizationTable[i][j] == CHECK && stateTable.containsKey(i+1)){
+                    for(String c : alphabet){
+                        if(stateTable.get(i+1).get(c) == j+1){
+                            stateTable.get(i+1).remove(c);
+                            stateTable.get(i+1).put(c, stateTable.get(j+1).get(c));
+                        }
+                    }
+                    for(Integer state : stateTable.keySet()) {
+                        for(String s : alphabet) {
+                            try{
+                                if(stateTable.get(state).get(s) == j+1 ){
+                                    stateTable.get(state).remove(s);
+                                    stateTable.get(state).put(s, i+1);
+                                }
+                            }catch (Throwable t){
+                                stateTable.get(state).put(s, i+1);
+                            }
+                        }
+
+                    }
+                    stateTable.remove(j+1);
+                    if(finalStates.contains(j+1)) finalStates.remove(j+1);
+                }
+            }
+
+        }
+
+
+        //remove unreachable states
+        while(removeUnreachable());
+
+
+    }
+
+    private boolean removeUnreachable(){
+        Set<Integer> unreachable = new HashSet<Integer>();
+        unreachable.addAll(stateTable.keySet());
+        for(Integer state : stateTable.keySet()) {
+            for(String s : alphabet) {
+                unreachable.remove(stateTable.get(state).get(s));
+            }
+        }
+        unreachable.remove(initState);
+        for(Integer unreach : unreachable) {
+            stateTable.remove(unreach);
+        }
+        return !unreachable.isEmpty();
+    }
+
+
+    private void markCross(int tableSize,  int[][] minimizationTable){
         for(int i=0; i<tableSize; i++){
             for(int j=0; j<tableSize; j++){
                 if(minimizationTable[i][j] == EMPTY) {
@@ -67,32 +130,17 @@ public class DFA {
                         }
                         value.put(c, states);
                         if(minimizationTable[states.get(0)-1][states.get(1)-1] == CROSS) {
-                            System.out.print("!");
                             minimizationTable[i][j] = CROSS; break;
 
                         }
                     }
-                    if(minimizationTable[i][j] == EMPTY){minimizationTable[i][j] = CHECK;}
                 }
             }
 
-
-            System.out.println();
         }
-
-
-
-        for(int i=0; i<tableSize; i++){
-            for(int j=0; j<tableSize; j++){
-                System.out.print(minimizationTable[i][j]+" ");
-            }
-            System.out.println();
-        }
-
-        System.out.println(notFinal);
-
 
     }
+
 
     public void addTrans(int from, int to, String s) {
         if(!stateTable.containsKey(from)) {
