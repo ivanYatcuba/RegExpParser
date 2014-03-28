@@ -1,5 +1,7 @@
-package com.company;
+package com.company.DFAimp;
 
+
+import com.company.NFA;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-import com.company.DFA;
+import com.company.DFAimp.DFA;
 import org.junit.Test;
 
 public class MinimizationTest {
@@ -92,5 +92,7 @@ public class MinimizationTest {
         dfa.minimize();
 
         System.out.println(dfa);
+        System.out.println(dfa.getFinalStates());
+        System.out.println(dfa.getStateNum());
     }
 }
