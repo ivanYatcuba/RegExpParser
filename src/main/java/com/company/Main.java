@@ -28,7 +28,10 @@ public class Main {
             System.out.println(test);
         }
         NFA nfa = new NFA("(a|b)*abb");
-        DFA dfa = new DFA();
+        DFA dfa = new DFA(nfa);
+        System.out.println(dfa);
+        dfa.minimize();
+        System.out.println(dfa);
 
     }
 }

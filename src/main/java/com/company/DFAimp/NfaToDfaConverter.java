@@ -7,11 +7,11 @@ import java.util.*;
 
 public class NfaToDfaConverter {
 
-
-
     public DFA NFAtoDFA(NFA nfa) {
         DFA dfa = new DFA();
         Map<Set<Integer>, Map<String, Set<Integer>>> dfaStateTable = new HashMap<Set<Integer>, Map<String, Set<Integer>>>();
+        Map<Set<Integer>, Integer> stateIndex = new HashMap<Set<Integer>, Integer>();
+        int stateNum = 0;
 
         //building an alphabet
         dfa.setAlphabet(buildDfaAlphabet(nfa));
@@ -19,6 +19,11 @@ public class NfaToDfaConverter {
         //let`s go and add init state!
         Set<Integer> initState = this.epsClosure(nfa.getStateTable(), 1);
         dfaStateTable.put(initState, new HashMap<String, Set<Integer>>());
+        stateNum++;
+        stateIndex.put(initState, stateNum);
+        if(initState.contains(nfa.getFinalState())) {
+            dfa.getFinalStates().add(stateNum);
+        }
 
         // so on...
         Stack<Set<Integer>> statesStack = new Stack<Set<Integer>>();
@@ -31,22 +36,15 @@ public class NfaToDfaConverter {
                 if(!dfaStateTable.keySet().contains(newState) && !newState.isEmpty()) {
                     statesStack.push(newState);
                     dfaStateTable.put(newState, new HashMap<String, Set<Integer>>());
+                    stateNum++;
+                    stateIndex.put(newState, stateNum);
+                    if(newState.contains(nfa.getFinalState())) {
+                        dfa.getFinalStates().add(stateNum);
+                    }
                 }
 
                 if(!newState.isEmpty()) dfaStateTable.get(dfaState).put(s, newState);
             }
-        }
-        System.out.println(dfaStateTable);
-        //yo, mark dfa states by indices and fill final states set
-        Map<Set<Integer>, Integer> stateIndex = new HashMap<Set<Integer>, Integer>();
-        for(Set<Integer> dfaState : dfaStateTable.keySet()) {
-            Integer index = dfa.getStateNum();
-            stateIndex.put(dfaState, index);
-            if(dfaState.contains(nfa.getFinalState())) {
-                dfa.getFinalStates().add(index);
-            }
-            if(dfaState.equals(initState)) dfa.setInitState(dfa.getStateNum());
-            dfa.setStateNum(dfa.getStateNum() + 1);
         }
 
         //get ready for building dfa state table!
@@ -59,13 +57,10 @@ public class NfaToDfaConverter {
             }
         }
 
-        System.out.println(dfa.getStateTable());
-        System.out.println(dfa.getFinalStates());
-        System.out.println(dfa.getInitState());
-
-        return  dfa;
+        return dfa;
 
     }
+
 
 
     private Set<String> buildDfaAlphabet(NFA nfa) {
