@@ -33,5 +33,7 @@ public class Main {
         dfa.minimize();
         System.out.println(dfa);
 
+        System.out.println(dfa.checkString("ab"));
+
     }
 }

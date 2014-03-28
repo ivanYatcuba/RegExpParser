@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3463e51e-437f-41db-9112-a6b2e4129fc0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/company/DFAimp/DFA.java" afterPath="$PROJECT_DIR$/src/main/java/com/company/DFAimp/DFA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/company/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/company/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/company/DFAimp/NfaToDfaConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/company/DFAimp/NfaToDfaConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RegExpParser.iws" />
@@ -72,7 +72,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="32" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="226" max-vertical-offset="774">
+            <state line="35" column="46" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="810">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#197#205#0" expanded="true" />
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NfaToDfaConverter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NfaToDfaConverter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/DFAimp/NfaToDfaConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="-3.031579" vertical-offset="1296" max-vertical-offset="2088">
+            <state line="8" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="2088">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#254#295#0" expanded="true" />
@@ -119,31 +119,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DFA.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DFA.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/DFAimp/DFA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="5" selection-start="1954" selection-end="1954" vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1566">
+            <state line="34" column="27" selection-start="995" selection-end="995" vertical-scroll-proportion="0.96437657" vertical-offset="233" max-vertical-offset="1782">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#167#198#0" expanded="true" />
                 <element signature="e#248#256#0" expanded="true" />
                 <element signature="e#316#325#0" expanded="true" />
-                <element signature="e#1270#1271#0" expanded="true" />
-                <element signature="e#1303#1304#0" expanded="true" />
-                <element signature="e#1340#1341#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#1423#1424#0" expanded="true" />
-                <element signature="e#1465#1466#0" expanded="true" />
-                <element signature="e#1509#1510#0" expanded="true" />
-                <element signature="e#1543#1544#0" expanded="true" />
-                <element signature="e#1579#1580#0" expanded="true" />
-                <element signature="e#1610#1611#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1699#1700#0" expanded="true" />
-                <element signature="e#1739#1740#0" expanded="true" />
-                <element signature="e#1770#1771#0" expanded="true" />
-                <element signature="e#1823#1824#0" expanded="true" />
-                <element signature="e#1863#1864#0" expanded="true" />
+                <element signature="e#1614#1615#0" expanded="true" />
+                <element signature="e#1647#1648#0" expanded="true" />
+                <element signature="e#1684#1685#0" expanded="true" />
+                <element signature="e#1716#1717#0" expanded="true" />
+                <element signature="e#1767#1768#0" expanded="true" />
+                <element signature="e#1809#1810#0" expanded="true" />
+                <element signature="e#1853#1854#0" expanded="true" />
+                <element signature="e#1887#1888#0" expanded="true" />
+                <element signature="e#1923#1924#0" expanded="true" />
+                <element signature="e#1954#1955#0" expanded="true" />
+                <element signature="e#2003#2004#0" expanded="true" />
+                <element signature="e#2043#2044#0" expanded="true" />
+                <element signature="e#2083#2084#0" expanded="true" />
+                <element signature="e#2114#2115#0" expanded="true" />
+                <element signature="e#2167#2168#0" expanded="true" />
+                <element signature="e#2207#2208#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -234,9 +234,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/company/DFA.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/DFAimp/DFAMinimizer.java" />
         <option value="$PROJECT_DIR$/src/test/java/MinimizationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/DFAimp/NfaToDfaConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/DFAimp/DFA.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/company/DFAimp/NfaToDfaConverter.java" />
       </list>
     </option>
   </component>
@@ -516,7 +516,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="RegExpParser" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -758,7 +764,7 @@
       <workItem from="1395587879063" duration="935000" />
       <workItem from="1395860127765" duration="10618000" />
       <workItem from="1395948673720" duration="2823000" />
-      <workItem from="1395958340868" duration="8620000" />
+      <workItem from="1395958340868" duration="9076000" />
     </task>
     <task id="LOCAL-00001" summary="convert from nfa to dfa super feature">
       <created>1395505557195</created>
@@ -788,11 +794,15 @@
       <created>1395965183343</created>
       <updated>1395965183343</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="nfa to dfa small state number fix&#10;">
+      <created>1395967069357</created>
+      <updated>1395967069357</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89169000" />
+    <option name="totallyTimeSpent" value="89625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="36" width="1370" height="736" extended-state="6" />
@@ -805,7 +815,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3927987" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39158577" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -818,7 +828,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23338369" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28478965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28478965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -873,7 +883,8 @@
     <MESSAGE value="minimize feature" />
     <MESSAGE value="finished minimization feature&#10;" />
     <MESSAGE value="major refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="major refactor" />
+    <MESSAGE value="nfa to dfa small state number fix&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="nfa to dfa small state number fix&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -922,22 +933,22 @@
             <element signature="e#167#198#0" expanded="true" />
             <element signature="e#248#256#0" expanded="true" />
             <element signature="e#316#325#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#1423#1424#0" expanded="true" />
-            <element signature="e#1465#1466#0" expanded="true" />
-            <element signature="e#1509#1510#0" expanded="true" />
-            <element signature="e#1543#1544#0" expanded="true" />
-            <element signature="e#1579#1580#0" expanded="true" />
-            <element signature="e#1610#1611#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1770#1771#0" expanded="true" />
-            <element signature="e#1823#1824#0" expanded="true" />
-            <element signature="e#1863#1864#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1853#1854#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1954#1955#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="e#2207#2208#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1293,34 +1304,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/DFAimp/DFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="5" selection-start="1954" selection-end="1954" vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1566">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#167#198#0" expanded="true" />
-            <element signature="e#248#256#0" expanded="true" />
-            <element signature="e#316#325#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#1423#1424#0" expanded="true" />
-            <element signature="e#1465#1466#0" expanded="true" />
-            <element signature="e#1509#1510#0" expanded="true" />
-            <element signature="e#1543#1544#0" expanded="true" />
-            <element signature="e#1579#1580#0" expanded="true" />
-            <element signature="e#1610#1611#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1770#1771#0" expanded="true" />
-            <element signature="e#1823#1824#0" expanded="true" />
-            <element signature="e#1863#1864#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MinimizationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="44" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="1872">
@@ -1330,19 +1313,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="32" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="774">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#197#205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/DFAimp/NfaToDfaConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="-3.031579" vertical-offset="1296" max-vertical-offset="2088">
+        <state line="8" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="2088">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#254#295#0" expanded="true" />
@@ -1352,6 +1325,44 @@
             <element signature="e#2893#2902#0" expanded="true" />
             <element signature="e#3324#3333#0" expanded="true" />
             <element signature="e#3565#3574#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="46" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="810">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#197#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/DFAimp/DFA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="27" selection-start="995" selection-end="995" vertical-scroll-proportion="0.96437657" vertical-offset="233" max-vertical-offset="1782">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#167#198#0" expanded="true" />
+            <element signature="e#248#256#0" expanded="true" />
+            <element signature="e#316#325#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1853#1854#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1954#1955#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="e#2207#2208#0" expanded="true" />
           </folding>
         </state>
       </provider>

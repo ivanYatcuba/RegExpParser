@@ -27,6 +27,18 @@ public class DFA {
     }
 
 
+    public boolean checkString(String s) {
+        char[] characters = s.toCharArray();
+        int currentState = 1;
+
+        for(char c : characters) {
+            Character ch = new Character(c);
+            currentState = stateTable.get(currentState).get(ch.toString());
+        }
+
+        return finalStates.contains(currentState);
+    }
+
     public void minimize(){
         DFAMinimizer minimizer = new DFAMinimizer();
         minimizer.minimize(this);
