@@ -1,10 +1,14 @@
-import com.company.DFAimp.DFA;
+import com.Logic.DFAimp.DFA;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class MinimizationTest {
 
     @Test
     public void testAdminMain() throws Exception {
+
+        ////Test1///////////
         DFA dfa = new DFA();
 
         dfa.addTrans(1,2,"0");
@@ -25,13 +29,26 @@ public class MinimizationTest {
         dfa.getFinalStates().add(4);
         dfa.getFinalStates().add(5);
 
-        System.out.println(dfa);
+
+        DFA expectedDfa = new DFA();
+
+        expectedDfa.addTrans(1,2,"0");
+        expectedDfa.addTrans(1,2,"1");
+
+        expectedDfa.addTrans(2,4,"0");
+        expectedDfa.addTrans(2,5,"1");
+
+        expectedDfa.addTrans(4,2,"0");
+        expectedDfa.addTrans(4,5,"1");
+
+        expectedDfa.addTrans(5,5,"0");
+        expectedDfa.addTrans(5,5,"1");
 
         dfa.minimize();
 
-        System.out.println(dfa);
+        assertEquals(dfa.getStateTable(), expectedDfa.getStateTable());
 
-        ///
+        ////Test2///////////
         dfa = new DFA();
         dfa.addTrans(1,2,"a");
         dfa.addTrans(1,5,"b");
@@ -58,13 +75,22 @@ public class MinimizationTest {
         dfa.getFinalStates().add(7);
         dfa.getFinalStates().add(4);
 
-        System.out.println(dfa);
+        expectedDfa = new DFA();
+
+        expectedDfa.addTrans(1,2,"a");
+        expectedDfa.addTrans(1,1,"b");
+
+        expectedDfa.addTrans(2,2,"a");
+        expectedDfa.addTrans(2,3,"b");
+
+        expectedDfa.addTrans(3,3,"a");
+        expectedDfa.addTrans(3,3,"b");
 
         dfa.minimize();
 
-        System.out.println(dfa);
+        assertEquals(dfa.getStateTable(), expectedDfa.getStateTable());
 
-
+        ////Test3///////////
         dfa = new DFA();
 
         dfa.addTrans(1,2,"0");
@@ -87,12 +113,16 @@ public class MinimizationTest {
 
         dfa.getFinalStates().add(6);
         dfa.getFinalStates().add(4);
-        System.out.println(dfa);
+
+        expectedDfa = new DFA();
+
+        expectedDfa.addTrans(1,1,"0");
+        expectedDfa.addTrans(1,4,"1");
+
+        expectedDfa.addTrans(4,4,"0");
+        expectedDfa.addTrans(4,4,"1");
 
         dfa.minimize();
-
-        System.out.println(dfa);
-        System.out.println(dfa.getFinalStates());
-        System.out.println(dfa.getStateNum());
+        assertEquals(dfa.getStateTable(), expectedDfa.getStateTable());
     }
 }

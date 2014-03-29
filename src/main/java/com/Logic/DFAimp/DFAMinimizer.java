@@ -1,4 +1,4 @@
-package com.company.DFAimp;
+package com.Logic.DFAimp;
 
 
 import java.util.*;
@@ -12,7 +12,6 @@ public class DFAMinimizer {
     public void minimize(DFA dfa) {
         Map<Integer, Map<String, Integer>> stateTable = dfa.getStateTable();
         Set<Integer> finalStates = dfa.getFinalStates();
-        Set<String> alphabet = dfa.getAlphabet();
 
         int tableSize = stateTable.size();
         int[][] minimizationTable = new int[tableSize][tableSize];
@@ -61,6 +60,7 @@ public class DFAMinimizer {
         mergeEqualStates(tableSize, minimizationTable, dfa);
 
         //remove unreachable states
+        System.out.println(dfa.getStateTable());
         while(removeUnreachable(dfa));
     }
 
@@ -101,12 +101,15 @@ public class DFAMinimizer {
                     for(String c: alphabet) {
                         ArrayList<Integer> states = new ArrayList<Integer>();
                         for(Integer state : key) {
+
                             states.add(stateTable.get(state+1).get(c));
                         }
                         value.put(c, states);
-                        if(minimizationTable[states.get(0)-1][states.get(1)-1] == CROSS) {
-                            minimizationTable[i][j] = CROSS; break;
-                        }
+                        try{
+                            if(minimizationTable[states.get(0)-1][states.get(1)-1] == CROSS) {
+                                minimizationTable[i][j] = CROSS; break;
+                            }
+                        }catch (Throwable e){ minimizationTable[i][j] = CROSS; break;}
                     }
                 }
             }
@@ -121,10 +124,12 @@ public class DFAMinimizer {
             for(int j=i+1; j<tableSize; j++){
                 if(minimizationTable[i][j] == CHECK && stateTable.containsKey(i+1)){
                     for(String c : alphabet){
-                        if(stateTable.get(i+1).get(c) == j+1){
-                            stateTable.get(i+1).remove(c);
-                            stateTable.get(i+1).put(c, stateTable.get(j+1).get(c));
-                        }
+                        try{
+                            if(stateTable.get(i+1).get(c) == j+1){
+                                stateTable.get(i+1).remove(c);
+                                stateTable.get(i+1).put(c, stateTable.get(j+1).get(c));
+                            }
+                        }catch (Throwable t) {}
                     }
                     for(Integer state : stateTable.keySet()) {
                         for(String s : alphabet) {

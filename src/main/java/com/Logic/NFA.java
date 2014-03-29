@@ -1,4 +1,4 @@
-package com.company;
+package com.Logic;
 
 
 import java.util.*;
