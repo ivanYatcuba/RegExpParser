@@ -33,7 +33,10 @@ public class DFA {
 
         for(char c : characters) {
             Character ch = new Character(c);
-            currentState = stateTable.get(currentState).get(ch.toString());
+            try {
+                currentState = stateTable.get(currentState).get(ch.toString());
+            } catch (NullPointerException e) { return false;}
+
         }
 
         return finalStates.contains(currentState);

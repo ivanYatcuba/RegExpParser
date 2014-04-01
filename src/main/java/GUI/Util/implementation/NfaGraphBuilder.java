@@ -1,5 +1,6 @@
-package GUI.Util;
+package GUI.Util.implementation;
 
+import GUI.Util.GraphBuilder;
 import com.Logic.NFA;
 import edu.uci.ics.jung.algorithms.layout.ISOMLayout;
 import edu.uci.ics.jung.algorithms.layout.Layout;
@@ -15,7 +16,7 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 
-public class NfaGraphBuilder {
+public class NfaGraphBuilder implements GraphBuilder{
     private Graph<Integer, String> graph;
 
     public NfaGraphBuilder(NFA nfa) {
@@ -36,7 +37,7 @@ public class NfaGraphBuilder {
     }
 
 
-
+    @Override
     public BasicVisualizationServer<Integer,String> getLayout() {
         Layout<Integer, String> layout = new ISOMLayout<Integer, String>(graph);
 
@@ -56,7 +57,8 @@ public class NfaGraphBuilder {
         return vv;
     }
 
-    private Transformer<Integer,Paint> paintTransformerBuilder (final Integer finalStates) {
+    @Override
+    public Transformer<Integer,Paint> paintTransformerBuilder (final Integer finalStates) {
         return new Transformer<Integer,Paint>() {
             public Paint transform(Integer i) {
                 if(i == finalStates) return  Color.BLUE;
@@ -65,7 +67,8 @@ public class NfaGraphBuilder {
         };
     }
 
-    private Transformer<Integer,Shape> shapeTransformerBuilder (final int scale) {
+    @Override
+    public Transformer<Integer,Shape> shapeTransformerBuilder (final int scale) {
         return new Transformer<Integer,Shape>(){
             public Shape transform(Integer i){
                 Ellipse2D circle = new Ellipse2D.Double(-15, -15, 30, 30);
@@ -75,7 +78,8 @@ public class NfaGraphBuilder {
     }
 
     //really bad solution
-    private Transformer<String, String> edgeLableTransformerBuilder () {
+    @Override
+    public Transformer<String, String> edgeLableTransformerBuilder () {
         return new Transformer<String, String>() {
             @Override
             public String transform(String c) {

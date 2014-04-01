@@ -20,10 +20,10 @@
     <RowConstraints maxHeight="139.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
 <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
   </rowConstraints>
-<children><TextField fx:id="s_String" GridPane.columnIndex="1" GridPane.rowIndex="4" /><TextField fx:id="s_RE" GridPane.columnIndex="1" GridPane.rowIndex="2" /><Label text="Regular expression" GridPane.columnIndex="1" GridPane.rowIndex="1" /><Label text="String" GridPane.columnIndex="1" GridPane.rowIndex="3" /><Label fx:id="l_Result" text="Result:" GridPane.columnIndex="1" GridPane.rowIndex="5" /><Button fx:id="b_DFA" mnemonicParsing="false" text="DFA" GridPane.columnIndex="1" GridPane.rowIndex="6" /><Button fx:id="b_NFA" mnemonicParsing="false" text="NFA" GridPane.columnIndex="1" GridPane.rowIndex="6">
+<children><TextField fx:id="s_String" GridPane.columnIndex="1" GridPane.rowIndex="4" /><TextField fx:id="s_RE" GridPane.columnIndex="1" GridPane.rowIndex="2" /><Label text="Regular expression" GridPane.columnIndex="1" GridPane.rowIndex="1" /><Label text="String" GridPane.columnIndex="1" GridPane.rowIndex="3" /><Label fx:id="l_Result" text="Result:" GridPane.columnIndex="1" GridPane.rowIndex="5" /><Button fx:id="b_DFA" mnemonicParsing="false" text="DFA" GridPane.columnIndex="1" GridPane.rowIndex="6" /><Button fx:id="b_NFA" mnemonicParsing="false" onAction="#openNFAScheme" text="NFA" GridPane.columnIndex="1" GridPane.rowIndex="6">
 <GridPane.margin>
 <Insets left="70.0" />
-</GridPane.margin></Button><Button mnemonicParsing="false" text="Check!" GridPane.columnIndex="2" GridPane.rowIndex="4">
+</GridPane.margin></Button><Button mnemonicParsing="false" onAction="#checkRedAction" text="Check!" GridPane.columnIndex="2" GridPane.rowIndex="4">
 <GridPane.margin>
 <Insets left="20.0" />
 </GridPane.margin></Button>

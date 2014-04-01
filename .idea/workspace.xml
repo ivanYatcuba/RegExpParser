@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3463e51e-437f-41db-9112-a6b2e4129fc0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/Util/NfaGraphBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/RegExpParsStarter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/fxml/main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegExpParser.iml" afterPath="$PROJECT_DIR$/RegExpParser.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/Util/GraphBuilder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/GUI/Util/NfaGraphBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/GUI/Util/implementation/NfaGraphBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFA.java" afterPath="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java" afterPath="$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GUI/fxml/main.fxml" afterPath="$PROJECT_DIR$/src/main/java/GUI/fxml/main.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RegExpParser.iws" />
@@ -101,16 +101,7 @@
       <file leaf-file-name="NfaToDfaConverter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="36" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="2088">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graph.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/unde/Нова тека/jung2-2_0_1(1)/jung-api-2.0.1.jar!/edu/uci/ics/jung/graph/Graph.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="864">
+            <state line="40" column="36" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="2052">
               <folding />
             </state>
           </provider>
@@ -135,10 +126,13 @@
         </entry>
       </file>
       <file leaf-file-name="NfaGraphBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/NfaGraphBuilder.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/NfaGraphBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="42" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1332">
-              <folding />
+            <state line="80" column="13" selection-start="3001" selection-end="3001" vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="1422">
+              <folding>
+                <element signature="e#2671#2953#0" expanded="true" />
+                <element signature="e#2942#2943#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,26 +140,39 @@
       <file leaf-file-name="RegExpParsStarter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI/RegExpParsStarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="30" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="990">
+            <state line="25" column="8" selection-start="579" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainPageController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainPageController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="8" selection-start="388" selection-end="388" vertical-scroll-proportion="0.6769231" vertical-offset="168" max-vertical-offset="702">
+            <state line="54" column="51" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="1098">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DFAMinimizer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java">
+      <file leaf-file-name="DfaGraphBuilder.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="2916">
-              <folding />
+            <state line="8" column="13" selection-start="215" selection-end="215" vertical-scroll-proportion="0.33333334" vertical-offset="14" max-vertical-offset="630">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/GraphBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="52" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="432">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,7 +180,7 @@
       <file leaf-file-name="main.fxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI/fxml/main.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="117" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="666">
+            <state line="20" column="117" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="666">
               <folding />
             </state>
           </provider>
@@ -217,7 +224,12 @@
         <option value="$PROJECT_DIR$/src/main/java/GUI/MinFrame.java" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/fxml/main.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/RegExpParsStarter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFA.java" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GUI/Util/DfaGraphBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GUI/Util/GraphBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GUI/Util/implementation/NfaGraphBuilder.java" />
       </list>
     </option>
   </component>
@@ -368,6 +380,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implementation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RegExpParser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RegExpParser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="fxml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -484,6 +530,8 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -870,7 +918,7 @@
       <workItem from="1396094801536" duration="13889000" />
       <workItem from="1396112181853" duration="3832000" />
       <workItem from="1396123559771" duration="1305000" />
-      <workItem from="1396393837032" duration="328000" />
+      <workItem from="1396393837032" duration="2040000" />
     </task>
     <task id="LOCAL-00001" summary="convert from nfa to dfa super feature">
       <created>1395505557195</created>
@@ -912,11 +960,15 @@
       <created>1396104610317</created>
       <updated>1396104610317</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="basic gui syuff">
+      <created>1396394183363</created>
+      <updated>1396394183363</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109140000" />
+    <option name="totallyTimeSpent" value="110852000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="39" width="1364" height="729" extended-state="4" />
@@ -1000,7 +1052,8 @@
     <MESSAGE value="nfa to dfa small state number fix&#10;" />
     <MESSAGE value="dfa emulation, finished all algorithmic work" />
     <MESSAGE value="minimization fixes, refactor&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="minimization fixes, refactor&#10;" />
+    <MESSAGE value="basic gui syuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic gui syuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1010,20 +1063,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="2916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="410" column="0" selection-start="14988" selection-end="14988" vertical-scroll-proportion="0.0" vertical-offset="7380" max-vertical-offset="21204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="959" column="0" selection-start="32863" selection-end="32863" vertical-scroll-proportion="0.0" vertical-offset="17262" max-vertical-offset="21564" />
@@ -1257,9 +1296,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/NFA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="34" selection-start="789" selection-end="789" vertical-scroll-proportion="-0.1306715" vertical-offset="576" max-vertical-offset="3672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/fxml/main.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="117" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/RegExpParsStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="8" selection-start="579" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="-1.9384615" vertical-offset="972" max-vertical-offset="2916">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.031914894" vertical-offset="72" max-vertical-offset="1458">
+        <state line="37" column="61" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="1512">
           <folding />
         </state>
       </provider>
@@ -1271,45 +1338,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/NFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="34" selection-start="789" selection-end="789" vertical-scroll-proportion="-0.1306715" vertical-offset="576" max-vertical-offset="3672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="2916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/fxml/main.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="117" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/NfaGraphBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="42" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1332">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/RegExpParsStarter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="30" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="990">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="8" selection-start="388" selection-end="388" vertical-scroll-proportion="0.6769231" vertical-offset="168" max-vertical-offset="702">
+        <state line="54" column="51" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="1098">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/GraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="52" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="432">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/NfaGraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="13" selection-start="3001" selection-end="3001" vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="1422">
+          <folding>
+            <element signature="e#2671#2953#0" expanded="true" />
+            <element signature="e#2942#2943#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="215" selection-end="215" vertical-scroll-proportion="0.33333334" vertical-offset="14" max-vertical-offset="630">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
