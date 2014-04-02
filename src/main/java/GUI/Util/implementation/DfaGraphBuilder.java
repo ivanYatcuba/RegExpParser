@@ -18,8 +18,9 @@ import java.awt.geom.Ellipse2D;
 
 public class DfaGraphBuilder implements GraphBuilder {
     private Graph<Integer, String> graph;
-
+    private DFA dfa;
     public DfaGraphBuilder(DFA dfa) {
+        this.dfa = dfa;
         graph = new SparseGraph<Integer, String>();
         for(Integer state : dfa.getStateTable().keySet()) {
             graph.addVertex(state);
@@ -38,16 +39,16 @@ public class DfaGraphBuilder implements GraphBuilder {
     public BasicVisualizationServer<Integer,String> getLayout() {
         Layout<Integer, String> layout = new ISOMLayout<Integer, String>(graph);
 
-        layout.setSize(new Dimension(300,300));
+        layout.setSize(new Dimension(500,500));
 
         BasicVisualizationServer<Integer,String> vv =
                 new BasicVisualizationServer<Integer,String>(layout);
 
-        vv.setPreferredSize(new Dimension(350,350));
+        vv.setPreferredSize(new Dimension(500, 500));
 
         //Transform view
         vv.getRenderContext().setEdgeLabelTransformer(edgeLableTransformerBuilder());
-        vv.getRenderContext().setVertexFillPaintTransformer(paintTransformerBuilder(1));
+        vv.getRenderContext().setVertexFillPaintTransformer(paintTransformerBuilder());
         vv.getRenderContext().setVertexShapeTransformer(shapeTransformerBuilder(1));
         vv.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
         vv.getRenderer().getVertexLabelRenderer().setPosition(Renderer.VertexLabel.Position.CNTR);
@@ -55,11 +56,12 @@ public class DfaGraphBuilder implements GraphBuilder {
     }
 
     @Override
-    public Transformer<Integer,Paint> paintTransformerBuilder (final Integer finalStates) {
+    public Transformer<Integer,Paint> paintTransformerBuilder () {
         return new Transformer<Integer,Paint>() {
             public Paint transform(Integer i) {
-                if(i == finalStates) return  Color.BLUE;
-                return Color.CYAN;
+                if(dfa.getFinalStates().contains(i)) return  new Color(205, 162, 49);
+                else if(i == dfa.getInitState()) return new Color(231, 162, 132);
+                return new Color(231, 92, 59);
             }
         };
     }

@@ -12,10 +12,10 @@ public class NFA {
 
     public NFA() {
 
-        initState = 1;
-        finalState = initState;
+        setInitState(1);
+        finalState = getInitState();
         stateTable = new HashMap<Integer, Map<String, List<Integer>>>();
-        stateTable.put(initState, new HashMap<String, List<Integer>>());
+        stateTable.put(getInitState(), new HashMap<String, List<Integer>>());
     }
 
     public Map<Integer, Map<String, List<Integer>>> getStateTable(){
@@ -89,7 +89,7 @@ public class NFA {
 
         this.stateTable = resNFA.stateTable;
         this.stateNum = resNFA.stateNum;
-        this.initState = resNFA.initState;
+        this.setInitState(resNFA.getInitState());
         this.finalState = resNFA.finalState;
     }
 
@@ -156,7 +156,7 @@ public class NFA {
     public NFA star(NFA nfa) {
         NFA resNfa = nfa;
         //connect nfa init state and final state
-        resNfa.stateTable.get(finalState).put("eps", new ArrayList<Integer>(Arrays.asList(resNfa.initState)));
+        resNfa.stateTable.get(finalState).put("eps", new ArrayList<Integer>(Arrays.asList(resNfa.getInitState())));
 
         //add init eps state
         Map<Integer, Map<String, List<Integer>>> tempStateTable = new HashMap<Integer, Map<String, List<Integer>>>();
@@ -198,5 +198,13 @@ public class NFA {
     @Override
     public String toString(){
         return this.stateTable.toString();
+    }
+
+    public Integer getInitState() {
+        return initState;
+    }
+
+    public void setInitState(Integer initState) {
+        this.initState = initState;
     }
 }

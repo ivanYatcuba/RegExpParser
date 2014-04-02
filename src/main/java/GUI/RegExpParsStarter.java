@@ -19,7 +19,7 @@ public class RegExpParsStarter {
 
     private static void initAndShowGUI() {
         // This method is invoked on the EDT thread
-        JFrame frame = new JFrame("Swing and JavaFX");
+        JFrame frame = new JFrame("RegExpParser");
         frame.setLocationRelativeTo(null);
         final JFXPanel fxPanel = new JFXPanel();
         frame.add(fxPanel);

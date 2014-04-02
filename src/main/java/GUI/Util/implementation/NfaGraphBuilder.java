@@ -18,8 +18,9 @@ import java.awt.geom.Ellipse2D;
 
 public class NfaGraphBuilder implements GraphBuilder{
     private Graph<Integer, String> graph;
-
+    private NFA nfa;
     public NfaGraphBuilder(NFA nfa) {
+        this.nfa = nfa;
         graph = new SparseGraph<Integer, String>();
         for(Integer state : nfa.getStateTable().keySet()) {
             graph.addVertex(state);
@@ -39,18 +40,18 @@ public class NfaGraphBuilder implements GraphBuilder{
 
     @Override
     public BasicVisualizationServer<Integer,String> getLayout() {
-        Layout<Integer, String> layout = new ISOMLayout<Integer, String>(graph);
+        Layout<Integer, String> layout = new ISOMLayout<>(graph);
 
-        layout.setSize(new Dimension(300,300));
+        layout.setSize(new Dimension(500,500));
 
         BasicVisualizationServer<Integer,String> vv =
                 new BasicVisualizationServer<Integer,String>(layout);
 
-        vv.setPreferredSize(new Dimension(350,350));
+        vv.setPreferredSize(new Dimension(500,500));
 
         //Transform view
         vv.getRenderContext().setEdgeLabelTransformer(edgeLableTransformerBuilder());
-        vv.getRenderContext().setVertexFillPaintTransformer(paintTransformerBuilder(1));
+        vv.getRenderContext().setVertexFillPaintTransformer(paintTransformerBuilder());
         vv.getRenderContext().setVertexShapeTransformer(shapeTransformerBuilder(1));
         vv.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
         vv.getRenderer().getVertexLabelRenderer().setPosition(Renderer.VertexLabel.Position.CNTR);
@@ -58,11 +59,12 @@ public class NfaGraphBuilder implements GraphBuilder{
     }
 
     @Override
-    public Transformer<Integer,Paint> paintTransformerBuilder (final Integer finalStates) {
+    public Transformer<Integer,Paint> paintTransformerBuilder () {
         return new Transformer<Integer,Paint>() {
             public Paint transform(Integer i) {
-                if(i == finalStates) return  Color.BLUE;
-                return Color.CYAN;
+                if(i == nfa.getInitState()) return   new Color(80, 152, 178);
+                else if(i == nfa.getFinalState()) return   new Color(146, 85, 178);
+                return new Color(89, 91, 178);
             }
         };
     }

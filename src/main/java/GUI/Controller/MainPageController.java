@@ -65,7 +65,7 @@ public class MainPageController {
 
         contentPane.add(graphBuilder.getLayout());
         frame.setContentPane(contentPane);
-        frame.setSize(392, 283);
+        frame.setSize(500, 500);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }

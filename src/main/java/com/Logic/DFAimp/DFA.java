@@ -45,6 +45,7 @@ public class DFA {
     public void minimize(){
         DFAMinimizer minimizer = new DFAMinimizer();
         minimizer.minimize(this);
+        initState = 1;
     }
 
     public void addTrans(int from, int to, String s) {

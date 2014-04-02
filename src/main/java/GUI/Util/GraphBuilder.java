@@ -9,7 +9,7 @@ public interface GraphBuilder {
 
     public BasicVisualizationServer<Integer,String> getLayout() ;
 
-    public Transformer<Integer,Paint> paintTransformerBuilder (final Integer finalStates);
+    public Transformer<Integer,Paint> paintTransformerBuilder ();
 
     public Transformer<Integer,Shape> shapeTransformerBuilder (final int scale);
 
