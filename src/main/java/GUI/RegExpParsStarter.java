@@ -49,9 +49,9 @@ public class RegExpParsStarter {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         Scene scene = new Scene(root, 392, 283);
 
+        scene.getStylesheets().add("/GUI/fxml/style.css");
         return (scene);
     }
 

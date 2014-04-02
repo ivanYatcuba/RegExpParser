@@ -1,13 +1,16 @@
 package GUI.Controller;
 
 
+import GUI.Util.GraphBuilder;
+import GUI.Util.implementation.DfaGraphBuilder;
 import GUI.Util.implementation.NfaGraphBuilder;
 import com.Logic.DFAimp.DFA;
 import com.Logic.NFA;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import javax.swing.*;
 
@@ -26,38 +29,54 @@ public class MainPageController {
     Button b_NFA;
 
     @FXML
-    Label l_Result;
+    ImageView i_result;
 
-    private NFA nfa;
-    private DFA dfa;
+    private NFA nfa = new NFA();
+    private DFA dfa = new DFA();
+    private String lastRE ="";
 
     public void checkRedAction() {
-        nfa = new NFA(s_RE.getText());
-        dfa = new DFA(nfa);
-        dfa.minimize();
+        build();
         boolean result = dfa.checkString(s_String.getText());
         if(result) {
-            l_Result.setText("cool");
+            Image image = new Image("/GUI/img/good.png");
+            i_result.setImage(image);
         }else {
-            l_Result.setText("bad");
+            Image image = new Image("/GUI/img/bad.png");
+            i_result.setImage(image);
         }
-
     }
 
     public void openNFAScheme() {
-        JFrame frame = new JFrame("Card Layout Example");
+        build();
+        buildSchemeWindow(new NfaGraphBuilder(nfa), "NFA");
+    }
+
+    public void openDFAScheme() {
+        build();
+        buildSchemeWindow(new DfaGraphBuilder(dfa), "DFA");
+    }
+
+    private void buildSchemeWindow(GraphBuilder graphBuilder, String title) {
+        JFrame frame = new JFrame(title);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         JPanel contentPane = new JPanel();
 
-
-        NfaGraphBuilder nfaGraphBuilder = new NfaGraphBuilder(nfa);
-        contentPane.add(nfaGraphBuilder.getLayout());
+        contentPane.add(graphBuilder.getLayout());
         frame.setContentPane(contentPane);
         frame.setSize(392, 283);
-
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
+    private void build(){
+        if(!s_RE.getText().equals(lastRE)){
+            nfa = new NFA(s_RE.getText());
+            dfa = new DFA(nfa);
+            dfa.minimize();
+            lastRE = s_RE.getText();
+        }
+    }
 
 }
