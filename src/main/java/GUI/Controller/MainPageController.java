@@ -31,6 +31,8 @@ public class MainPageController {
     @FXML
     ImageView i_result;
 
+    @FXML
+    Button ok;
     private NFA nfa = new NFA();
     private DFA dfa = new DFA();
     private String lastRE ="";
@@ -72,10 +74,20 @@ public class MainPageController {
 
     private void build(){
         if(!s_RE.getText().equals(lastRE)){
-            nfa = new NFA(s_RE.getText());
-            dfa = new DFA(nfa);
-            dfa.minimize();
-            lastRE = s_RE.getText();
+            try {
+                nfa = new NFA(s_RE.getText());
+                System.out.println("----------------INFO-----------------");
+                System.out.println("Regular expression: "+s_RE.getText());
+                System.out.println("NFA: "+nfa);
+                dfa = new DFA(nfa);
+                System.out.println("DFA: "+dfa);
+                dfa.minimize();
+                System.out.println("Minimized DFA: "+dfa);
+                lastRE = s_RE.getText();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Wrong regular expression!");
+            }
+
         }
     }
 

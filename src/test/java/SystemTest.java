@@ -6,7 +6,12 @@ import org.junit.Test;
 public class SystemTest {
     @Test
     public void globalTest(){
-        NFA nfa = new NFA("(a|b)*abbc");
+        NFA nfa = null;
+        try {
+            nfa = new NFA("(a|b)*abbc");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         DFA dfa = new DFA(nfa);
         dfa.minimize();
         System.out.println(nfa.getFinalState());

@@ -26,8 +26,13 @@ public class DFA {
         this.stateNum = dfa.stateNum;
     }
 
-
+    /**
+     * Check if string belongs to regular expression
+     * @param s  actual string
+     * @return true if string belongs to regular expression
+     */
     public boolean checkString(String s) {
+        if(s.isEmpty() && alphabet.isEmpty()) return true; //dirty empty string cheat
         char[] characters = s.toCharArray();
         int currentState = 1;
 
@@ -42,12 +47,21 @@ public class DFA {
         return finalStates.contains(currentState);
     }
 
+    /**
+     * Minimize dfa using DFaMinimizer
+     */
     public void minimize(){
         DFAMinimizer minimizer = new DFAMinimizer();
         minimizer.minimize(this);
         initState = 1;
     }
 
+    /**
+     * Add a new transaction between DFA states
+     * @param from what state make transaction
+     * @param to what state make transaction
+     * @param s which character is used for transaction
+     */
     public void addTrans(int from, int to, String s) {
         if(!stateTable.containsKey(from)) {
             stateTable.put(from, new HashMap<String, Integer>());

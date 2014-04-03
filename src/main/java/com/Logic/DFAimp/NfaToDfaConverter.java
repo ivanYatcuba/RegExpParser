@@ -7,6 +7,11 @@ import java.util.*;
 
 public class NfaToDfaConverter {
 
+    /**
+     * Coverts  nondeterministic finite automaton to deterministic finite automaton
+     * @param nfa NFA to be converted to dfa
+     * @return new DFA
+     */
     public DFA NFAtoDFA(NFA nfa) {
         DFA dfa = new DFA();
         Map<Set<Integer>, Map<String, Set<Integer>>> dfaStateTable = new HashMap<Set<Integer>, Map<String, Set<Integer>>>();
@@ -62,7 +67,11 @@ public class NfaToDfaConverter {
     }
 
 
-
+    /**
+     * Gets from nfa alphabet for dfa
+     * @param nfa alphabet source
+     * @return dfa alphabet
+     */
     private Set<String> buildDfaAlphabet(NFA nfa) {
         Set<String> alphabet = new HashSet<String>();
 
@@ -78,6 +87,14 @@ public class NfaToDfaConverter {
         return alphabet;
     }
 
+    /**
+     * Given N - a NFA and T - a set of NFA states, we would
+     * like to know which states in N are reachable from
+     * states T by eps transitions.
+     * @param stateTable whole nfa state table
+     * @param state current T state
+     * @return
+     */
     private Set<Integer> epsClosure(Map<Integer, Map<String, List<Integer>>> stateTable, Integer state) {
         Set<Integer> closure = new HashSet<Integer>();
 
@@ -91,6 +108,13 @@ public class NfaToDfaConverter {
         return closure;
     }
 
+    /**
+     * Geat all states that reachable from state by s symbol
+     * @param stateTable nfa state source
+     * @param states current state
+     * @param s transfer symbol
+     * @return
+     */
     private Set<Integer> goToState(Map<Integer, Map<String, List<Integer>>> stateTable, Set<Integer> states, String s) {
         Set<Integer> transStates = new HashSet<Integer>();
 

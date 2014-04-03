@@ -9,6 +9,10 @@ public class DFAMinimizer {
     final int CHECK = 2;
     final int EMPTY = 0;
 
+    /**
+     * Minimize DFA
+     * @param dfa DFA to be minimized
+     */
     public void minimize(DFA dfa) {
         Map<Integer, Map<String, Integer>> stateTable = dfa.getStateTable();
         Set<Integer> finalStates = dfa.getFinalStates();
@@ -60,7 +64,6 @@ public class DFAMinimizer {
         mergeEqualStates(tableSize, minimizationTable, dfa);
 
         //remove unreachable states
-        System.out.println(dfa.getStateTable());
         while(removeUnreachable(dfa));
     }
 
@@ -86,7 +89,12 @@ public class DFAMinimizer {
         return !unreachable.isEmpty();
     }
 
-
+    /**
+     * Checks in minimization table which states are not unic
+     * @param tableSize size of minimization table
+     * @param minimizationTable minimization table
+     * @param dfa dfa to be minimized
+     */
     private void markCross(int tableSize,  int[][] minimizationTable, DFA dfa){
         Map<Integer, Map<String, Integer>> stateTable = dfa.getStateTable();
         Set<String> alphabet = dfa.getAlphabet();
@@ -94,14 +102,13 @@ public class DFAMinimizer {
         for(int i=0; i<tableSize; i++){
             for(int j=0; j<tableSize; j++){
                 if(minimizationTable[i][j] == EMPTY) {
-                    ArrayList<Integer> key = new ArrayList<Integer>();
+                    ArrayList<Integer> key = new ArrayList<>();
                     key.add(i);
                     key.add(j);
-                    Map<String, ArrayList<Integer>> value = new HashMap<String, ArrayList<Integer>>();
+                    Map<String, ArrayList<Integer>> value = new HashMap<>();
                     for(String c: alphabet) {
-                        ArrayList<Integer> states = new ArrayList<Integer>();
+                        ArrayList<Integer> states = new ArrayList<>();
                         for(Integer state : key) {
-
                             states.add(stateTable.get(state+1).get(c));
                         }
                         value.put(c, states);
@@ -116,6 +123,13 @@ public class DFAMinimizer {
         }
     }
 
+
+    /**
+     * Merge equal states (removeing unuseful states)
+     * @param tableSize size of minimization table
+     * @param minimizationTable minimization table
+     * @param dfa DFA to be minimized
+     */
     private void mergeEqualStates (int tableSize,  int[][] minimizationTable, DFA dfa){
         Map<Integer, Map<String, Integer>> stateTable = dfa.getStateTable();
         Set<String> alphabet = dfa.getAlphabet();

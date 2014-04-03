@@ -26,7 +26,12 @@ public class NFA {
         return finalState;
     }
 
-    public NFA(String exp){
+    /**
+     * Create NFA using regular expression
+     * @param exp regular expression
+     * @throws Exception
+     */
+    public NFA(String exp) throws Exception{
 
         Stack<NFA> NFAs = new Stack<NFA>();
         Stack<String> ops  = new Stack<String>();
@@ -44,7 +49,6 @@ public class NFA {
                 int y = exp.substring(0,i-1).lastIndexOf('(');
                 exp = exp.substring(0, y) + "(" + exp.substring(y,i-1) + exp.substring(i-1,i+1) + ")" + exp.substring(i+1,exp.length());
                 i+=2;
-                System.out.println(exp);
             }
         }
 
@@ -93,7 +97,10 @@ public class NFA {
         this.finalState = resNFA.finalState;
     }
 
-
+    /**
+     * Add a new state to NFA
+     * @param in transaction symbol
+     */
     public void transf(String in){
         stateNum++;
         stateTable.put(stateNum, new HashMap<String, List<Integer>>());
@@ -106,7 +113,12 @@ public class NFA {
     }
 
 
-
+    /**
+     * Increase all indices by constant number
+     * @param nfa in which nfa
+     * @param position how much change index
+     * @param tempStateTable temporary state table
+     */
     private void changeAllIndexBy(NFA nfa, int position, Map<Integer, Map<String, List<Integer>>> tempStateTable ) {
         for(Integer state : nfa.stateTable.keySet()) {
             tempStateTable.put(state+position, new HashMap<String, List<Integer>>());
@@ -120,7 +132,11 @@ public class NFA {
 
     }
 
-
+    /**
+     * create OR statement
+     * @param nfa2 with which dfa create OR
+     * @return new nfa
+     */
     public NFA  alter(NFA nfa2) {
         NFA resNFA = this;
 
@@ -152,7 +168,11 @@ public class NFA {
         return resNFA;
     }
 
-
+    /**
+     * Create loop statment
+     * @param nfa in which dfa
+     * @return new dfa with loop
+     */
     public NFA star(NFA nfa) {
         NFA resNfa = nfa;
         //connect nfa init state and final state
@@ -181,6 +201,11 @@ public class NFA {
         return resNfa;
     }
 
+    /**
+     * Concat two nfas
+     * @param nfa2 with which nfa we need concatination
+     * @return new concatinated nfa
+     */
     public NFA concat(NFA nfa2){
         NFA resNFA = this;
 
