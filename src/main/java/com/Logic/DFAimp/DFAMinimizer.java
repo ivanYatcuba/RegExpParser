@@ -34,7 +34,7 @@ public class DFAMinimizer {
 
         }
 
-        Set<Integer> notFinal = new HashSet<Integer>();
+        Set<Integer> notFinal = new HashSet<>();
         notFinal.addAll(stateTable.keySet());
         notFinal.removeAll(finalStates);
 
@@ -73,7 +73,7 @@ public class DFAMinimizer {
         Set<Integer> finalStates = dfa.getFinalStates();
         Set<String> alphabet = dfa.getAlphabet();
 
-        Set<Integer> unreachable = new HashSet<Integer>();
+        Set<Integer> unreachable = new HashSet<>();
         unreachable.addAll(stateTable.keySet());
         for(Integer state : stateTable.keySet()) {
             for(String s : alphabet) {

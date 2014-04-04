@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SystemTest {
     @Test
-    public void globalTest(){
+    public void globalTest1(){
         NFA nfa = null;
         try {
             nfa = new NFA("(a|b)*abbc");
@@ -14,11 +14,68 @@ public class SystemTest {
         }
         DFA dfa = new DFA(nfa);
         dfa.minimize();
-        System.out.println(nfa.getFinalState());
-        System.out.println(dfa.getFinalStates());
-        dfa.checkString("baabb");
         Assert.assertEquals(dfa.checkString("baabbc"), true);
         Assert.assertEquals(dfa.checkString("babbc"), true);
-        System.out.println(dfa);
+        Assert.assertEquals(dfa.checkString("ababc"), false);
+    }
+
+    @Test
+    public void globalTest2(){
+        NFA nfa = null;
+        try {
+            nfa = new NFA("a*bc");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        DFA dfa = new DFA(nfa);
+        dfa.minimize();
+        Assert.assertEquals(dfa.checkString("aabc"), true);
+        Assert.assertEquals(dfa.checkString("bc"), true);
+        Assert.assertEquals(dfa.checkString("abcd"), false);
+    }
+
+    @Test
+    public void globalTest3(){
+        NFA nfa = null;
+        try {
+            nfa = new NFA("a|bcdf");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        DFA dfa = new DFA(nfa);
+        dfa.minimize();
+        Assert.assertEquals(dfa.checkString("a"), true);
+        Assert.assertEquals(dfa.checkString("bcdf"), true);
+        Assert.assertEquals(dfa.checkString("abcdf"), false);
+    }
+
+    @Test
+    public void globalTest4(){
+        NFA nfa = null;
+        try {
+            nfa = new NFA(" ");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        DFA dfa = new DFA(nfa);
+        dfa.minimize();
+        Assert.assertEquals(dfa.checkString(" "), true);
+        Assert.assertEquals(dfa.checkString("abcdf"), false);
+    }
+
+    @Test
+    public void globalTest5(){
+        NFA nfa = null;
+        try {
+            nfa = new NFA("a*b*(cd)*");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        DFA dfa = new DFA(nfa);
+        dfa.minimize();
+        Assert.assertEquals(dfa.checkString("abcd"), true);
+        Assert.assertEquals(dfa.checkString("cd"), true);
+        Assert.assertEquals(dfa.checkString("acd"), true);
+        Assert.assertEquals(dfa.checkString("abc"), false);
     }
 }

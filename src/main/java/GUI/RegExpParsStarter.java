@@ -1,11 +1,13 @@
 package GUI;
 
 
+import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -14,7 +16,7 @@ import java.io.IOException;
 /**
  * Created by ivan on 29.03.14.
  */
-public class RegExpParsStarter {
+public class RegExpParsStarter extends Application {
 
 
     private static void initAndShowGUI() {
@@ -62,5 +64,10 @@ public class RegExpParsStarter {
                 initAndShowGUI();
             }
         });
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        main(null);
     }
 }

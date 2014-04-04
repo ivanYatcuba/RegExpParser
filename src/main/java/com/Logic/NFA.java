@@ -14,7 +14,7 @@ public class NFA {
 
         setInitState(1);
         finalState = getInitState();
-        stateTable = new HashMap<Integer, Map<String, List<Integer>>>();
+        stateTable = new HashMap<>();
         stateTable.put(getInitState(), new HashMap<String, List<Integer>>());
     }
 
@@ -33,11 +33,9 @@ public class NFA {
      */
     public NFA(String exp) throws Exception{
 
-        Stack<NFA> NFAs = new Stack<NFA>();
-        Stack<String> ops  = new Stack<String>();
-        List<String> posibleOps = new ArrayList<String>(Arrays.asList("*","|","(",")"));
-        Stack<Integer> opCount = new Stack<Integer>();
-        Integer count = 0;
+        Stack<NFA> NFAs = new Stack<>();
+        Stack<String> ops  = new Stack<>();
+        List<String> posibleOps = new ArrayList<>(Arrays.asList("*","|","(",")"));
         String perviousChar = null;
 
         exp = "(" +exp + ")";
@@ -82,7 +80,7 @@ public class NFA {
             }
             perviousChar = s;
         }
-        Stack<NFA> lNFA = new Stack<NFA>();
+        Stack<NFA> lNFA = new Stack<>();
         while(!NFAs.isEmpty()) {
             lNFA.push(NFAs.pop());
         }
@@ -107,7 +105,7 @@ public class NFA {
         try{
             stateTable.get(finalState).get(in).add(stateNum);
         }catch (Throwable t){
-            stateTable.get(finalState).put(in, new ArrayList<Integer>(Arrays.asList(stateNum)));
+            stateTable.get(finalState).put(in, new ArrayList<>(Arrays.asList(stateNum)));
         }
         finalState = stateNum;
     }
@@ -141,18 +139,18 @@ public class NFA {
         NFA resNFA = this;
 
         //Add new eps transf to nfa1
-        Map<Integer, Map<String, List<Integer>>> tempStateTable = new HashMap<Integer, Map<String, List<Integer>>>();
+        Map<Integer, Map<String, List<Integer>>> tempStateTable = new HashMap<>();
 
         tempStateTable.put(1, new HashMap<String, List<Integer>>());
         changeAllIndexBy(resNFA, 1, tempStateTable);
 
-        tempStateTable.get(1).put("eps", new ArrayList<Integer>(Arrays.asList(2)));
+        tempStateTable.get(1).put("eps", new ArrayList<>(Arrays.asList(2)));
         resNFA.stateTable = tempStateTable;
         resNFA.stateNum++;
         resNFA.finalState = stateNum;
         ////////////////////////////////
         //Now let's merge nfa1 and nfa2///
-        tempStateTable = new HashMap<Integer, Map<String, List<Integer>>>();
+        tempStateTable = new HashMap<>();
         changeAllIndexBy(nfa2, resNFA.stateNum, tempStateTable);
 
         resNFA.stateTable.putAll(tempStateTable);
@@ -162,8 +160,8 @@ public class NFA {
         //add final state
         resNFA.stateTable.put(resNFA.stateNum+1, new HashMap<String, List<Integer>>());
         resNFA.stateNum++;
-        resNFA.stateTable.get(resNFA.stateNum-nfa2.stateNum-1).put("eps", new ArrayList<Integer>(Arrays.asList(resNFA.stateNum)));
-        resNFA.stateTable.get(resNFA.stateNum-1).put("eps", new ArrayList<Integer>(Arrays.asList(resNFA.stateNum)));
+        resNFA.stateTable.get(resNFA.stateNum-nfa2.stateNum-1).put("eps", new ArrayList<>(Arrays.asList(resNFA.stateNum)));
+        resNFA.stateTable.get(resNFA.stateNum-1).put("eps", new ArrayList<>(Arrays.asList(resNFA.stateNum)));
         resNFA.finalState = resNFA.stateNum;
         return resNFA;
     }
@@ -176,15 +174,15 @@ public class NFA {
     public NFA star(NFA nfa) {
         NFA resNfa = nfa;
         //connect nfa init state and final state
-        resNfa.stateTable.get(finalState).put("eps", new ArrayList<Integer>(Arrays.asList(resNfa.getInitState())));
+        resNfa.stateTable.get(finalState).put("eps", new ArrayList<>(Arrays.asList(resNfa.getInitState())));
 
         //add init eps state
-        Map<Integer, Map<String, List<Integer>>> tempStateTable = new HashMap<Integer, Map<String, List<Integer>>>();
+        Map<Integer, Map<String, List<Integer>>> tempStateTable = new HashMap<>();
 
         tempStateTable.put(1, new HashMap<String, List<Integer>>());
         changeAllIndexBy(resNfa, 1, tempStateTable);
 
-        tempStateTable.get(1).put("eps", new ArrayList<Integer>(Arrays.asList(2)));
+        tempStateTable.get(1).put("eps", new ArrayList<>(Arrays.asList(2)));
         resNfa.stateTable = tempStateTable;
         resNfa.stateNum++;
         resNfa.finalState = stateNum;
@@ -196,7 +194,7 @@ public class NFA {
         try {
             resNfa.stateTable.get(1).get("eps").add(resNfa.finalState);
         }catch (Throwable t){
-            resNfa.stateTable.get(1).put("eps", new ArrayList<Integer>(Arrays.asList(resNfa.finalState)));
+            resNfa.stateTable.get(1).put("eps", new ArrayList<>(Arrays.asList(resNfa.finalState)));
         }
         return resNfa;
     }
@@ -210,7 +208,7 @@ public class NFA {
         NFA resNFA = this;
 
         resNFA.stateTable.remove(resNFA.finalState);
-        Map<Integer, Map<String, List<Integer>>> tempStateTable = new HashMap<Integer, Map<String, List<Integer>>>();
+        Map<Integer, Map<String, List<Integer>>> tempStateTable = new HashMap<>();
         changeAllIndexBy(nfa2, resNFA.stateNum - 1, tempStateTable);
 
         resNFA.stateTable.putAll(tempStateTable);

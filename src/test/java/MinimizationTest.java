@@ -6,9 +6,8 @@ import static org.junit.Assert.assertEquals;
 public class MinimizationTest {
 
     @Test
-    public void testAdminMain() throws Exception {
+    public void test1() throws Exception {
 
-        ////Test1///////////
         DFA dfa = new DFA();
 
         dfa.addTrans(1,2,"0");
@@ -47,9 +46,12 @@ public class MinimizationTest {
         dfa.minimize();
 
         assertEquals(dfa.getStateTable(), expectedDfa.getStateTable());
+    }
 
-        ////Test2///////////
-        dfa = new DFA();
+    @Test
+    public void test2() throws Exception {
+        DFA dfa = new DFA();
+        DFA expectedDfa = new DFA();
         dfa.addTrans(1,2,"a");
         dfa.addTrans(1,5,"b");
 
@@ -89,8 +91,12 @@ public class MinimizationTest {
         dfa.minimize();
 
         assertEquals(dfa.getStateTable(), expectedDfa.getStateTable());
+    }
 
-        ////Test3///////////
+    @Test
+    public void test3() throws Exception {
+        DFA dfa = new DFA();
+        DFA expectedDfa = new DFA();
         dfa = new DFA();
 
         dfa.addTrans(1,2,"0");
@@ -125,4 +131,5 @@ public class MinimizationTest {
         dfa.minimize();
         assertEquals(dfa.getStateTable(), expectedDfa.getStateTable());
     }
+
 }

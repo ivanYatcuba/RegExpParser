@@ -14,8 +14,8 @@ public class NfaToDfaConverter {
      */
     public DFA NFAtoDFA(NFA nfa) {
         DFA dfa = new DFA();
-        Map<Set<Integer>, Map<String, Set<Integer>>> dfaStateTable = new HashMap<Set<Integer>, Map<String, Set<Integer>>>();
-        Map<Set<Integer>, Integer> stateIndex = new HashMap<Set<Integer>, Integer>();
+        Map<Set<Integer>, Map<String, Set<Integer>>> dfaStateTable = new HashMap<>();
+        Map<Set<Integer>, Integer> stateIndex = new HashMap<>();
         int stateNum = 0;
 
         //building an alphabet
@@ -31,7 +31,7 @@ public class NfaToDfaConverter {
         }
 
         // so on...
-        Stack<Set<Integer>> statesStack = new Stack<Set<Integer>>();
+        Stack<Set<Integer>> statesStack = new Stack<>();
         statesStack.push(initState);
         while(!statesStack.isEmpty()){
             Set<Integer> dfaState = statesStack.pop();
@@ -73,7 +73,7 @@ public class NfaToDfaConverter {
      * @return dfa alphabet
      */
     private Set<String> buildDfaAlphabet(NFA nfa) {
-        Set<String> alphabet = new HashSet<String>();
+        Set<String> alphabet = new HashSet<>();
 
         try{
             for(Integer i : nfa.getStateTable().keySet()) {
@@ -96,7 +96,7 @@ public class NfaToDfaConverter {
      * @return
      */
     private Set<Integer> epsClosure(Map<Integer, Map<String, List<Integer>>> stateTable, Integer state) {
-        Set<Integer> closure = new HashSet<Integer>();
+        Set<Integer> closure = new HashSet<>();
 
         closure.add(state);
         try{
@@ -116,7 +116,7 @@ public class NfaToDfaConverter {
      * @return
      */
     private Set<Integer> goToState(Map<Integer, Map<String, List<Integer>>> stateTable, Set<Integer> states, String s) {
-        Set<Integer> transStates = new HashSet<Integer>();
+        Set<Integer> transStates = new HashSet<>();
 
         for(Integer state : states) {
             try{
@@ -124,7 +124,7 @@ public class NfaToDfaConverter {
             }catch (NullPointerException ex){};
         }
 
-        Set<Integer> resultStates = new HashSet<Integer>();
+        Set<Integer> resultStates = new HashSet<>();
         for(Integer state : transStates) {
             resultStates.addAll(this.epsClosure(stateTable, state));
         }

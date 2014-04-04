@@ -7,9 +7,9 @@ import java.util.*;
 
 public class DFA {
 
-    private Map<Integer, Map<String, Integer>> stateTable = new HashMap<Integer, Map<String, Integer>>();
-    private Set<String> alphabet = new HashSet<String>();
-    private Set<Integer> finalStates = new LinkedHashSet<Integer>();
+    private Map<Integer, Map<String, Integer>> stateTable = new HashMap<>();
+    private Set<String> alphabet = new HashSet<>();
+    private Set<Integer> finalStates = new LinkedHashSet<>();
     private Integer initState = 1;
     private Integer stateNum = 1;
 

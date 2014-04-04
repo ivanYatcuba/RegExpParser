@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="RegExpParser">
+    <output-path>$PROJECT_DIR$/out/artifacts/RegExpParser</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="GUI.RegExpParsStarter" />
+        <option name="description" value="" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="RegExpParser.jar">
+        <element id="module-output" name="RegExpParser" />
+      </element>
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/jung/collections-generic-4.01.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/jung/jung-algorithms-2.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/jung/jung-api-2.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/jung/jung-graph-impl-2.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/jung/jung-visualization-2.0.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
