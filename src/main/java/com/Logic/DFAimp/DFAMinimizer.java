@@ -54,6 +54,8 @@ public class DFAMinimizer {
         //Main algorithm
         markCross(tableSize, minimizationTable, dfa);
         markCross(tableSize, minimizationTable, dfa);
+
+
         for(int i = 0; i<tableSize; i++) {
             for(int j=i+1; j<tableSize; j++) {
                 if(minimizationTable[i][j] == EMPTY){minimizationTable[i][j] = CHECK;}
@@ -152,9 +154,7 @@ public class DFAMinimizer {
                                     stateTable.get(state).remove(s);
                                     stateTable.get(state).put(s, i+1);
                                 }
-                            }catch (Throwable t){
-                                stateTable.get(state).put(s, i+1);
-                            }
+                            }catch (Throwable t){}
                         }
 
                     }

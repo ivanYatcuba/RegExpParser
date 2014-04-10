@@ -35,8 +35,9 @@ public class NFA {
 
         Stack<NFA> NFAs = new Stack<>();
         Stack<String> ops  = new Stack<>();
-        List<String> posibleOps = new ArrayList<>(Arrays.asList("*","|","(",")"));
+        List<String> posibleOps = new ArrayList<>(Arrays.asList("*","|","("));
         String perviousChar = null;
+        int alterIndex = 0;
 
         exp = "(" +exp + ")";
         for (int i = -1; (i = exp.indexOf("*", i + 1)) != -1; ) {
@@ -50,6 +51,8 @@ public class NFA {
             }
         }
 
+
+         System.out.print(exp);
         char [] arr = exp.toCharArray();
         for(char c : arr) {
             String s = String.valueOf(c);
@@ -57,16 +60,7 @@ public class NFA {
             else if (s.equals("|"))    ops.push(s);
             else if (s.equals("*"))    ops.push(s);
             else if (s.equals(")")) {
-                while (!ops.isEmpty() && !ops.equals("(")) {
-                    NFA nfa1 = NFAs.pop();
-                    String op = ops.pop();
-                    if      (op.equals("|"))    nfa1.alter(NFAs.pop());
-                    else if (op.equals("*")) {
-
-                        nfa1.star(nfa1);
-                    }
-                    NFAs.add(nfa1);
-                }
+                precalculate(NFAs, ops);
             }
             else {
                 if(posibleOps.contains(perviousChar) || perviousChar == null) {
@@ -74,12 +68,51 @@ public class NFA {
                     newNFA.transf(s);
                     NFAs.add(newNFA);
                 }else{
+                    if(NFAs.isEmpty()) NFAs.push(new NFA());
                     NFAs.peek().transf(s);
                 }
 
             }
             perviousChar = s;
         }
+
+        NFA resNFA = mergeNfas(NFAs);
+        this.stateTable = resNFA.stateTable;
+        this.stateNum = resNFA.stateNum;
+        this.setInitState(resNFA.getInitState());
+        this.finalState = resNFA.finalState;
+    }
+    private void precalculate(Stack<NFA> NFAs, Stack<String> ops){
+        while (!ops.isEmpty() && !ops.peek().equals("(")) {
+            NFA nfa1 = NFAs.pop();
+            String op = ops.pop();
+            if(op.equals("|")) {
+                if(!ops.peek().equals("|")) {
+                    try{
+                    NFA temp = mergeNfas(NFAs);
+
+                    NFAs.push(temp);
+
+                    nfa1.alter(NFAs.pop());
+                    }catch(EmptyStackException ese){}
+                }else nfa1.alter(NFAs.pop());
+            }
+            else if(op.equals("*")) {
+                nfa1.star(nfa1);
+                try{
+                if(!ops.peek().equals("|")) {
+                    NFA tmp = NFAs.pop();
+                    tmp.concat(nfa1);
+                    nfa1 = tmp;
+                }
+                }catch (EmptyStackException ese){}
+            }
+            NFAs.add(nfa1);
+        }
+        if(!ops.isEmpty()) ops.pop();
+    }
+
+    private NFA mergeNfas(Stack<NFA> NFAs) {
         Stack<NFA> lNFA = new Stack<>();
         while(!NFAs.isEmpty()) {
             lNFA.push(NFAs.pop());
@@ -88,11 +121,7 @@ public class NFA {
         while(!lNFA.isEmpty()) {
             resNFA.concat(lNFA.pop());
         }
-
-        this.stateTable = resNFA.stateTable;
-        this.stateNum = resNFA.stateNum;
-        this.setInitState(resNFA.getInitState());
-        this.finalState = resNFA.finalState;
+        return resNFA;
     }
 
     /**
