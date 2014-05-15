@@ -6,6 +6,7 @@ import GUI.Util.implementation.DfaGraphBuilder;
 import GUI.Util.implementation.NfaGraphBuilder;
 import com.Logic.DFAimp.DFA;
 import com.Logic.NFA;
+import com.Logic.NFAParser;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -50,13 +51,21 @@ public class MainPageController {
     }
 
     public void openNFAScheme() {
-        build();
-        buildSchemeWindow(new NfaGraphBuilder(nfa), "NFA");
+        try{
+            build();
+            buildSchemeWindow(new NfaGraphBuilder(nfa), "NFA");
+        } catch (Throwable t){
+            JOptionPane.showMessageDialog(null, "Wrong regular expression!");
+        }
     }
 
     public void openDFAScheme() {
-        build();
-        buildSchemeWindow(new DfaGraphBuilder(dfa), "DFA");
+        try{
+            build();
+            buildSchemeWindow(new DfaGraphBuilder(dfa), "DFA");
+        } catch (Throwable t){
+            JOptionPane.showMessageDialog(null, "Wrong regular expression!");
+        }
     }
 
     private void buildSchemeWindow(GraphBuilder graphBuilder, String title) {
@@ -74,8 +83,8 @@ public class MainPageController {
 
     private void build(){
         if(!s_RE.getText().equals(lastRE)){
-            try {
-                nfa = new NFA(s_RE.getText());
+                NFAParser nfaParser = new NFAParser();
+                nfa = nfaParser.parseNFA(s_RE.getText());
                 System.out.println("----------------INFO-----------------");
                 System.out.println("Regular expression: "+s_RE.getText());
                 System.out.println("NFA: "+nfa);
@@ -84,10 +93,6 @@ public class MainPageController {
                 dfa.minimize();
                 System.out.println("Minimized DFA: "+dfa);
                 lastRE = s_RE.getText();
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Wrong regular expression!");
-            }
-
         }
     }
 

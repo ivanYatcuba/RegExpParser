@@ -52,8 +52,10 @@ public class DFAMinimizer {
         }
 
         //Main algorithm
-        markCross(tableSize, minimizationTable, dfa);
-        markCross(tableSize, minimizationTable, dfa);
+        boolean f = true;
+        while (f){
+            f = markCross(tableSize, minimizationTable, dfa);
+        }
 
 
         for(int i = 0; i<tableSize; i++) {
@@ -97,10 +99,10 @@ public class DFAMinimizer {
      * @param minimizationTable minimization table
      * @param dfa dfa to be minimized
      */
-    private void markCross(int tableSize,  int[][] minimizationTable, DFA dfa){
+    private boolean markCross(int tableSize,  int[][] minimizationTable, DFA dfa){
         Map<Integer, Map<String, Integer>> stateTable = dfa.getStateTable();
         Set<String> alphabet = dfa.getAlphabet();
-
+        boolean wasChanged = false;
         for(int i=0; i<tableSize; i++){
             for(int j=0; j<tableSize; j++){
                 if(minimizationTable[i][j] == EMPTY) {
@@ -116,13 +118,15 @@ public class DFAMinimizer {
                         value.put(c, states);
                         try{
                             if(minimizationTable[states.get(0)-1][states.get(1)-1] == CROSS) {
-                                minimizationTable[i][j] = CROSS; break;
+                                minimizationTable[i][j] = CROSS;
+                                wasChanged = true; break;
                             }
-                        }catch (Throwable e){ minimizationTable[i][j] = CROSS; break;}
+                        }catch (Throwable e){ minimizationTable[i][j] = CROSS;wasChanged = true; break;}
                     }
                 }
             }
         }
+        return wasChanged;
     }
 
 

@@ -62,6 +62,21 @@ public class NfaToDfaConverter {
             }
         }
 
+        //add dead state
+        stateNum++;
+        Map<String, Integer> dead = new HashMap<>();
+        for(String c : dfa.getAlphabet()){
+            dead.put(c,stateNum);
+        }
+        dfa.getStateTable().put(stateNum, dead);
+        dfa.setStateNum(stateNum);
+        for(Integer state : dfa.getStateTable().keySet()){
+            for(String c: dfa.getAlphabet()){
+                if(!dfa.getStateTable().get(state).containsKey(c)){
+                    dfa.getStateTable().get(state).put(c, dfa.getStateNum());
+                }
+            }
+        }
         return dfa;
 
     }

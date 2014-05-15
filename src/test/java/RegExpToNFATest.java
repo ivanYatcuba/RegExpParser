@@ -1,4 +1,5 @@
 import com.Logic.NFA;
+import com.Logic.NFAParser;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -6,7 +7,8 @@ import static org.junit.Assert.assertEquals;
 public class RegExpToNFATest {
     @Test
     public void NfaCreationTest1() throws Exception {
-        NFA nfa = new NFA("abc");
+        NFAParser nfaParser = new NFAParser();
+        NFA  nfa = nfaParser.parseNFA("abc");
 
         NFA expectedNFA = new NFA();
         expectedNFA.transf("a");
@@ -17,7 +19,8 @@ public class RegExpToNFATest {
 
     @Test
     public void NfaCreationTest2() throws Exception {
-        NFA nfa = new NFA("a|b");
+        NFAParser nfaParser = new NFAParser();
+        NFA  nfa = nfaParser.parseNFA("a|b");
 
         NFA expectedNFA = new NFA();
         NFA tempNFA = new NFA();
@@ -29,7 +32,8 @@ public class RegExpToNFATest {
 
     @Test
     public void NfaCreationTest3() throws Exception {
-        NFA nfa = new NFA("a*");
+        NFAParser nfaParser = new NFAParser();
+        NFA  nfa = nfaParser.parseNFA("a*");
 
         NFA expectedNFA = new NFA();
         expectedNFA.transf("a");

@@ -6,10 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3463e51e-437f-41db-9112-a6b2e4129fc0" name="Default" comment="bug fixes">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RegExpParser.jar" afterPath="$PROJECT_DIR$/RegExpParser.jar" />
+    <list default="true" id="3463e51e-437f-41db-9112-a6b2e4129fc0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/Logic/NFAParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java" afterPath="$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/Logic/NFA.java" afterPath="$PROJECT_DIR$/src/main/java/com/Logic/NFA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/RegExpToNFATest.java" afterPath="$PROJECT_DIR$/src/test/java/RegExpToNFATest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/SystemTest.java" afterPath="$PROJECT_DIR$/src/test/java/SystemTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RegExpParser.iws" />
@@ -29,7 +34,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" line="16" class="com.Logic.DFAimp.DFAMinimizer" package="com.Logic.DFAimp">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java" line="79" class="com.Logic.DFAimp.NfaToDfaConverter" package="com.Logic.DFAimp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -44,7 +49,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" line="36" class="com.Logic.DFAimp.DFAMinimizer" package="com.Logic.DFAimp">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/NFAParser.java" line="87" class="com.Logic.NFAParser" package="com.Logic">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -59,7 +64,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" line="54" class="com.Logic.DFAimp.DFAMinimizer" package="com.Logic.DFAimp">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java" line="27" class="GUI.Util.implementation.DfaGraphBuilder" package="GUI.Util.implementation">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -74,7 +79,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" line="65" class="com.Logic.DFAimp.DFAMinimizer" package="com.Logic.DFAimp">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" line="102" class="com.Logic.DFAimp.DFAMinimizer" package="com.Logic.DFAimp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -89,7 +94,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" line="68" class="com.Logic.DFAimp.DFAMinimizer" package="com.Logic.DFAimp">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" line="128" class="com.Logic.DFAimp.DFAMinimizer" package="com.Logic.DFAimp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -104,37 +109,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/NFA.java" line="35" class="com.Logic.NFA" package="com.Logic">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/NFA.java" line="54" class="com.Logic.NFA" package="com.Logic">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/NFA.java" line="91" class="com.Logic.NFA" package="com.Logic">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/Logic/NFAParser.java" line="100" class="com.Logic.NFAParser" package="com.Logic">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -199,7 +174,25 @@
       <file leaf-file-name="SystemTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SystemTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="1566">
+            <state line="48" column="0" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1602">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPageController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="49" selection-start="2475" selection-end="2475" vertical-scroll-proportion="0.18881118" vertical-offset="1350" max-vertical-offset="1674">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NfaGraphBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/NfaGraphBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="58" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1422">
               <folding />
             </state>
           </provider>
@@ -208,16 +201,7 @@
       <file leaf-file-name="DfaGraphBuilder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="36" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1746">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainPageController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="0" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.0" vertical-offset="1566" max-vertical-offset="1800">
+            <state line="27" column="0" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
               <folding />
             </state>
           </provider>
@@ -226,7 +210,7 @@
       <file leaf-file-name="RegExpParsStarter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI/RegExpParsStarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="10" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="1422">
+            <state line="52" column="9" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="1422">
               <folding />
             </state>
           </provider>
@@ -235,43 +219,25 @@
       <file leaf-file-name="DFAMinimizer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="3168">
+            <state line="128" column="0" selection-start="4278" selection-end="4278" vertical-scroll-proportion="0.0" vertical-offset="2187" max-vertical-offset="3240">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NFA.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/NFA.java">
+      <file leaf-file-name="NFAParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/NFAParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="69" selection-start="3699" selection-end="3699" vertical-scroll-proportion="0.305949" vertical-offset="1926" max-vertical-offset="4680">
+            <state line="95" column="94" selection-start="3452" selection-end="3452" vertical-scroll-proportion="0.0" vertical-offset="1339" max-vertical-offset="1908">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/GraphBuilder.java">
+      <file leaf-file-name="NfaToDfaConverter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="63" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="432">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="URLClassLoader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/net/URLClassLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="365" column="0" selection-start="13550" selection-end="13550" vertical-scroll-proportion="0.0" vertical-offset="6570" max-vertical-offset="14346">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegExpToNFATest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/RegExpToNFATest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="828">
+            <state line="79" column="0" selection-start="2910" selection-end="2910" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="2754">
               <folding />
             </state>
           </provider>
@@ -280,7 +246,16 @@
       <file leaf-file-name="NFAtoDFATest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/NFAtoDFATest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="73" selection-start="1642" selection-end="1705" vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="1368">
+            <state line="39" column="0" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.0" vertical-offset="974" max-vertical-offset="1260">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegExpToNFATest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/RegExpToNFATest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="828">
               <folding />
             </state>
           </provider>
@@ -324,27 +299,29 @@
         <option value="$PROJECT_DIR$/src/main/java/GUI/fxml/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/Util/GraphBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/Util/implementation/NfaGraphBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/WronRegularExpresionExeprion.java" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/fxml/alert.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java" />
         <option value="$PROJECT_DIR$/src/test/java/MinimizationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/NFAtoDFATest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SystemTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/RegExpToNFATest.java" />
         <option value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/main/java/GUI/RegExpParsStarter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Logic/NFA.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SystemTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/RegExpToNFATest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Logic/NFAParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="39" />
-    <option name="width" value="1364" />
-    <option name="height" value="729" />
+    <option name="x" value="-2" />
+    <option name="y" value="36" />
+    <option name="width" value="1370" />
+    <option name="height" value="736" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -374,6 +351,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -403,14 +381,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -590,23 +560,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegExpParser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegExpParser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -833,25 +788,6 @@
       <option name="trusted" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -878,6 +814,25 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -916,25 +871,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -968,6 +904,25 @@
       <option name="screenWidth" value="0" />
       <option name="url" value="http://" />
       <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <list size="5">
@@ -1039,7 +994,14 @@
       <workItem from="1396589482500" duration="2982000" />
       <workItem from="1396649881688" duration="10670000" />
       <workItem from="1396701476905" duration="58000" />
-      <workItem from="1397154696621" duration="307000" />
+      <workItem from="1397154696621" duration="946000" />
+      <workItem from="1397773699385" duration="892000" />
+      <workItem from="1397775239512" duration="514000" />
+      <workItem from="1397799176539" duration="2723000" />
+      <workItem from="1397835955692" duration="1802000" />
+      <workItem from="1400107593068" duration="8283000" />
+      <workItem from="1400153747940" duration="76000" />
+      <workItem from="1400179562204" duration="6115000" />
     </task>
     <task id="LOCAL-00001" summary="convert from nfa to dfa super feature">
       <created>1395505557195</created>
@@ -1105,15 +1067,19 @@
       <created>1396574065301</created>
       <updated>1396574065301</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="bug fixes">
+      <created>1397155015690</created>
+      <updated>1397155015691</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145894000" />
+    <option name="totallyTimeSpent" value="166938000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="39" width="1364" height="729" extended-state="4" />
-    <editor active="false" />
+    <frame x="-2" y="36" width="1370" height="736" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1122,33 +1088,33 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3511327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34951457" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32200646" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31877023" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22610015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44844517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22432025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4579288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496136" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1166,8 +1132,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1210,13 +1176,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="2520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2106">
@@ -1417,13 +1376,6 @@
         <state line="241" column="20" selection-start="12854" selection-end="12854" vertical-scroll-proportion="0.0" vertical-offset="4256" max-vertical-offset="8964" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/NfaGraphBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="58" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1494">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/GraphBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="63" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="378">
@@ -1438,27 +1390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/RegExpParsStarter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="10" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="488" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="36" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1368">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NFAtoDFATest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="73" selection-start="1642" selection-end="1705" vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="1368">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/net/URLClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="365" column="0" selection-start="13550" selection-end="13550" vertical-scroll-proportion="0.0" vertical-offset="5565" max-vertical-offset="13086">
@@ -1466,51 +1397,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/RegExpParsStarter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="2484">
+        <state line="52" column="9" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="1422">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="49" selection-start="501" selection-end="501" vertical-scroll-proportion="0.92783505" vertical-offset="36" max-vertical-offset="1782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SystemTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="1512">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/RegExpToNFATest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="774">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.0" vertical-offset="771" max-vertical-offset="1602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="3168">
+        <state line="41" column="57" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0" vertical-offset="530" max-vertical-offset="1782">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/NFA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="69" selection-start="3699" selection-end="3699" vertical-scroll-proportion="0.305949" vertical-offset="1926" max-vertical-offset="4680">
+        <state line="15" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="3168">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/DFAMinimizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="0" selection-start="4278" selection-end="4278" vertical-scroll-proportion="0.0" vertical-offset="2187" max-vertical-offset="3240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SystemTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1602">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/DFAimp/NfaToDfaConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="2910" selection-end="2910" vertical-scroll-proportion="0.0" vertical-offset="1273" max-vertical-offset="2754">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/RegExpToNFATest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="355" max-vertical-offset="828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NFAtoDFATest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.0" vertical-offset="499" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Logic/NFAParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="94" selection-start="3452" selection-end="3452" vertical-scroll-proportion="0.0" vertical-offset="1339" max-vertical-offset="1908">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/DfaGraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Util/implementation/NfaGraphBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="58" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI/Controller/MainPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="49" selection-start="2475" selection-end="2475" vertical-scroll-proportion="0.18881118" vertical-offset="1350" max-vertical-offset="1674">
           <folding />
         </state>
       </provider>

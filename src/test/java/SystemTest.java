@@ -1,5 +1,6 @@
 import com.Logic.DFAimp.DFA;
 import com.Logic.NFA;
+import com.Logic.NFAParser;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,7 +9,8 @@ public class SystemTest {
     public void globalTest1(){
         NFA nfa = null;
         try {
-            nfa = new NFA("(a|b)*abbc");
+            NFAParser  nfaParser = new NFAParser();
+            nfa = nfaParser.parseNFA("(a|b)*abbc");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -23,7 +25,8 @@ public class SystemTest {
     public void globalTest2(){
         NFA nfa = null;
         try {
-            nfa = new NFA("a*bc");
+            NFAParser  nfaParser = new NFAParser();
+            nfa = nfaParser.parseNFA("a*bc");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -38,7 +41,8 @@ public class SystemTest {
     public void globalTest3(){
         NFA nfa = null;
         try {
-            nfa = new NFA("a|bcdf");
+            NFAParser  nfaParser = new NFAParser();
+            nfa = nfaParser.parseNFA("a|bcdf");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,7 +57,8 @@ public class SystemTest {
     public void globalTest4(){
         NFA nfa = null;
         try {
-            nfa = new NFA(" ");
+            NFAParser  nfaParser = new NFAParser();
+            nfa = nfaParser.parseNFA(" ");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -67,7 +72,8 @@ public class SystemTest {
     public void globalTest5(){
         NFA nfa = null;
         try {
-            nfa = new NFA("a*b*(cd)*");
+            NFAParser  nfaParser = new NFAParser();
+            nfa = nfaParser.parseNFA("a*b*(cd)*");
         } catch (Exception e) {
             e.printStackTrace();
         }

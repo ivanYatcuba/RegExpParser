@@ -21,17 +21,28 @@ public class DfaGraphBuilder implements GraphBuilder {
     private DFA dfa;
     public DfaGraphBuilder(DFA dfa) {
         this.dfa = dfa;
-        graph = new SparseGraph<Integer, String>();
+        int deadState = Integer.MIN_VALUE;
+        for (int d : dfa.getStateTable().keySet()) {
+            if (d > deadState) deadState = d;
+        }
+        graph = new SparseGraph<>();
         for(Integer state : dfa.getStateTable().keySet()) {
-            graph.addVertex(state);
+            if(state != deadState){
+                graph.addVertex(state);
+            }
         }
         int edgeId = 0;
         for(Integer state : dfa.getStateTable().keySet()) {
-            for(String trans : dfa.getStateTable().get(state).keySet()) {
-                Integer toState = dfa.getStateTable().get(state).get(trans);
-                    graph.addEdge(edgeId+"|"+trans, state, toState, EdgeType.DIRECTED);
-                    edgeId++;
+            if(state != deadState ){
+                for(String trans : dfa.getStateTable().get(state).keySet()) {
+                    Integer toState = dfa.getStateTable().get(state).get(trans);
+                    if(toState != deadState ) {
+                        graph.addEdge(edgeId+"|"+trans, state, toState, EdgeType.DIRECTED);
+                        edgeId++;
+                    }
+                }
             }
+
         }
     }
 
